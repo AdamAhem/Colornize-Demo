@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ namespace Game
         [SerializeField] private PlayerCountSelectorHandler _playerCountHandler;
         [SerializeField] private Button[] _buttonsToDisableWhileChoosingPiece;
         [SerializeField] private PlayerPieceSelectionHandler[] _pieceSelectionHandlers;
+        [SerializeField] private TMP_Text _pieceNameText;
 
         [Header("Events")]
         [SerializeField] private GameEvent _playerAddPieceEvent;
@@ -21,6 +23,7 @@ namespace Game
         public void Initialize()
         {
             _playerCountHandler.Initialize();
+            _pieceNameText.text = "";
         }
 
         public void Enable()
