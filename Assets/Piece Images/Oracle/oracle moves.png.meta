@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: ce668127ff73f9344928a364031d2689
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -944418211345318170
+    second: oracle moves_0
+  - first:
+      213: 5694441978918802439
+    second: oracle moves_1
+  - first:
+      213: -2341213792520170598
+    second: oracle moves_2
+  - first:
+      213: -7365302990660748667
+    second: oracle moves_3
+  - first:
+      213: 2356801376920116400
+    second: oracle moves_4
+  - first:
+      213: 4198024142573585095
+    second: oracle moves_5
+  - first:
+      213: 2927993855663852964
+    second: oracle moves_6
+  - first:
+      213: 2417148197310849301
+    second: oracle moves_7
+  - first:
+      213: 5475613146959693524
+    second: oracle moves_8
+  - first:
+      213: 3556486146539323147
+    second: oracle moves_9
+  - first:
+      213: 2132651405479375935
+    second: oracle moves_10
+  - first:
+      213: -3747512036425003000
+    second: oracle moves_11
+  - first:
+      213: -5968020328073079227
+    second: oracle moves_12
+  - first:
+      213: -6408497281875094528
+    second: oracle moves_13
+  - first:
+      213: -3881971882466704714
+    second: oracle moves_14
+  - first:
+      213: 6362974315825054854
+    second: oracle moves_15
+  - first:
+      213: -5761788047122616101
+    second: oracle moves_16
+  - first:
+      213: -6440679260665940073
+    second: oracle moves_17
+  - first:
+      213: -486737745202318210
+    second: oracle moves_18
+  - first:
+      213: -1815653704213302440
+    second: oracle moves_19
+  - first:
+      213: 2495027539043237281
+    second: oracle moves_20
+  - first:
+      213: -5508175485286985142
+    second: oracle moves_21
+  - first:
+      213: 787089073016273384
+    second: oracle moves_22
+  - first:
+      213: -6214122303875796565
+    second: oracle moves_23
+  - first:
+      213: 605705167816074988
+    second: oracle moves_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: oracle moves_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee3a59f3a0c4e2f0800000000000000
+      internalID: -944418211345318170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70417833fc8b60f40800000000000000
+      internalID: 5694441978918802439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a931791c576528fd0800000000000000
+      internalID: -2341213792520170598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a3b8af3ff29c990800000000000000
+      internalID: -7365302990660748667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 207
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc997d8d5a05b020800000000000000
+      internalID: 2356801376920116400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2cc9037b0624a30800000000000000
+      internalID: 4198024142573585095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4adce5706e252a820800000000000000
+      internalID: 2927993855663852964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51160369a7f6b8120800000000000000
+      internalID: 2417148197310849301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_8
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6cdf765294dfb40800000000000000
+      internalID: 5475613146959693524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_9
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ff215ae4d2b5130800000000000000
+      internalID: 3556486146539323147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34f55d6723b89d10800000000000000
+      internalID: 2132651405479375935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800136578a92efbc0800000000000000
+      internalID: -3747512036425003000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_12
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546d4eca1255d2da0800000000000000
+      internalID: -5968020328073079227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_13
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00457c10da17017a0800000000000000
+      internalID: -6408497281875094528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_14
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b28485f327702ac0800000000000000
+      internalID: -3881971882466704714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684cfa18d63dd4850800000000000000
+      internalID: 6362974315825054854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_16
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd03a246c440a00b0800000000000000
+      internalID: -5761788047122616101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797f7cb265c1e96a0800000000000000
+      internalID: -6440679260665940073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_18
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74f07e7992ce39f0800000000000000
+      internalID: -486737745202318210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_19
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8537e3563908dc6e0800000000000000
+      internalID: -1815653704213302440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad3d79d35e10a220800000000000000
+      internalID: 2495027539043237281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_21
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4254f664970f83b0800000000000000
+      internalID: -5508175485286985142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_22
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e9f9bb775d4cea00800000000000000
+      internalID: 787089073016273384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_23
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1b6ae30b003c9a0800000000000000
+      internalID: -6214122303875796565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oracle moves_24
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6ab4614a5e76800800000000000000
+      internalID: 605705167816074988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      oracle moves_0: -944418211345318170
+      oracle moves_1: 5694441978918802439
+      oracle moves_10: 2132651405479375935
+      oracle moves_11: -3747512036425003000
+      oracle moves_12: -5968020328073079227
+      oracle moves_13: -6408497281875094528
+      oracle moves_14: -3881971882466704714
+      oracle moves_15: 6362974315825054854
+      oracle moves_16: -5761788047122616101
+      oracle moves_17: -6440679260665940073
+      oracle moves_18: -486737745202318210
+      oracle moves_19: -1815653704213302440
+      oracle moves_2: -2341213792520170598
+      oracle moves_20: 2495027539043237281
+      oracle moves_21: -5508175485286985142
+      oracle moves_22: 787089073016273384
+      oracle moves_23: -6214122303875796565
+      oracle moves_24: 605705167816074988
+      oracle moves_3: -7365302990660748667
+      oracle moves_4: 2356801376920116400
+      oracle moves_5: 4198024142573585095
+      oracle moves_6: 2927993855663852964
+      oracle moves_7: 2417148197310849301
+      oracle moves_8: 5475613146959693524
+      oracle moves_9: 3556486146539323147
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

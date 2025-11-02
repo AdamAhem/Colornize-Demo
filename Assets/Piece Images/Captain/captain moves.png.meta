@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: c5ac8731aea6c3b4fac7ee2a5b50bfd1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6950163480492133060
+    second: captain moves_0
+  - first:
+      213: -25487889869808307
+    second: captain moves_1
+  - first:
+      213: -6507841306553486059
+    second: captain moves_2
+  - first:
+      213: -6612865474240548508
+    second: captain moves_3
+  - first:
+      213: 5940352731880525778
+    second: captain moves_4
+  - first:
+      213: 4218438342982291670
+    second: captain moves_5
+  - first:
+      213: 6884045700209123608
+    second: captain moves_6
+  - first:
+      213: 2219183452612729336
+    second: captain moves_7
+  - first:
+      213: -1790236070102587091
+    second: captain moves_8
+  - first:
+      213: -8408691832974803423
+    second: captain moves_9
+  - first:
+      213: -139244962525544888
+    second: captain moves_10
+  - first:
+      213: -1382097594850229480
+    second: captain moves_11
+  - first:
+      213: 7472519454898639910
+    second: captain moves_12
+  - first:
+      213: 5429923327738843410
+    second: captain moves_13
+  - first:
+      213: 7475544054641355161
+    second: captain moves_14
+  - first:
+      213: 2645677997392161723
+    second: captain moves_15
+  - first:
+      213: 6799232486174441339
+    second: captain moves_16
+  - first:
+      213: -4287937134422369307
+    second: captain moves_17
+  - first:
+      213: 7006054544255760263
+    second: captain moves_18
+  - first:
+      213: -3088953322590075448
+    second: captain moves_19
+  - first:
+      213: 7497840412893941156
+    second: captain moves_20
+  - first:
+      213: 5156317983000418744
+    second: captain moves_21
+  - first:
+      213: 1730552865577507602
+    second: captain moves_22
+  - first:
+      213: -78462160992314406
+    second: captain moves_23
+  - first:
+      213: -423544652495017647
+    second: captain moves_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: captain moves_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c35bf56532f0c8f90800000000000000
+      internalID: -6950163480492133060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d5c3236e275aff0800000000000000
+      internalID: -25487889869808307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515f34ccfc08fa5a0800000000000000
+      internalID: -6507841306553486059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461727c33e16a34a0800000000000000
+      internalID: -6612865474240548508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 207
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df8248165f507250800000000000000
+      internalID: 5940352731880525778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0d85c9257ea8a30800000000000000
+      internalID: 4218438342982291670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8112582571b098f50800000000000000
+      internalID: 6884045700209123608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f91868a79f1cce10800000000000000
+      internalID: 2219183452612729336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_8
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29a17187cdc727e0800000000000000
+      internalID: -1790236070102587091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_9
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12efecd34535e4b80800000000000000
+      internalID: -8408691832974803423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ef6efb17d411ef0800000000000000
+      internalID: -139244962525544888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813c7066f8dc1dce0800000000000000
+      internalID: -1382097594850229480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_12
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624dd666ad8b3b760800000000000000
+      internalID: 7472519454898639910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_13
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2111b736f76fa5b40800000000000000
+      internalID: 5429923327738843410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_14
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9996ea7e5b77eb760800000000000000
+      internalID: 7475544054641355161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb60a80f1657b420800000000000000
+      internalID: 2645677997392161723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_16
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7f39bb1ce9bb5e50800000000000000
+      internalID: 6799232486174441339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb5c8b05ef2e74c0800000000000000
+      internalID: -4287937134422369307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_18
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78730630d718a3160800000000000000
+      internalID: 7006054544255760263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_19
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5814fa155d125d0800000000000000
+      internalID: -3088953322590075448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad8c19512ead0860800000000000000
+      internalID: 7497840412893941156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_21
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9d2bdd2ebee8740800000000000000
+      internalID: 5156317983000418744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_22
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b18c199a8240810800000000000000
+      internalID: 1730552865577507602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_23
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb5ebd841f39eef0800000000000000
+      internalID: -78462160992314406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: captain moves_24
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159a481f1644f1af0800000000000000
+      internalID: -423544652495017647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      captain moves_0: -6950163480492133060
+      captain moves_1: -25487889869808307
+      captain moves_10: -139244962525544888
+      captain moves_11: -1382097594850229480
+      captain moves_12: 7472519454898639910
+      captain moves_13: 5429923327738843410
+      captain moves_14: 7475544054641355161
+      captain moves_15: 2645677997392161723
+      captain moves_16: 6799232486174441339
+      captain moves_17: -4287937134422369307
+      captain moves_18: 7006054544255760263
+      captain moves_19: -3088953322590075448
+      captain moves_2: -6507841306553486059
+      captain moves_20: 7497840412893941156
+      captain moves_21: 5156317983000418744
+      captain moves_22: 1730552865577507602
+      captain moves_23: -78462160992314406
+      captain moves_24: -423544652495017647
+      captain moves_3: -6612865474240548508
+      captain moves_4: 5940352731880525778
+      captain moves_5: 4218438342982291670
+      captain moves_6: 6884045700209123608
+      captain moves_7: 2219183452612729336
+      captain moves_8: -1790236070102587091
+      captain moves_9: -8408691832974803423
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

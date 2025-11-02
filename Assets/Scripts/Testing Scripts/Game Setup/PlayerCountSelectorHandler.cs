@@ -19,6 +19,8 @@ namespace Game
 
         public void Initialize()
         {
+            _gameData.GenerateNewPlayerConfigs(_maxPlayers);
+
             UpdatePlayerCountDataAndText(_defaultPlayerNumber);
             UpdatePlayerDisplayPanel(_defaultPlayerNumber);
         }
@@ -45,10 +47,6 @@ namespace Game
 
         private void UpdatePlayerDisplayPanel(int playerCount)
         {
-            // a player panel can be either ACTIVATED OR DEACTIVATED.
-            // when playercount changes, the first panels from the left will be activated (if not already so)
-            // then the last right will be deactivated (if not already so)
-
             for (int i = 0; i < _pieceSelectionHandlers.Length; i++)
             {
                 if (i < playerCount) _pieceSelectionHandlers[i].SetActive();

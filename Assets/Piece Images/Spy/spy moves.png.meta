@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 88d445a6d84ab7048bfc61a59a6fe855
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 904226031180920530
+    second: spy moves_0
+  - first:
+      213: 5747466863039508368
+    second: spy moves_1
+  - first:
+      213: 3063863156803874595
+    second: spy moves_2
+  - first:
+      213: 1505055323359009014
+    second: spy moves_3
+  - first:
+      213: 7643235196796895736
+    second: spy moves_4
+  - first:
+      213: 3310444572855872361
+    second: spy moves_5
+  - first:
+      213: -7597224123678225989
+    second: spy moves_6
+  - first:
+      213: 3380145153222077047
+    second: spy moves_7
+  - first:
+      213: 2735712148278127721
+    second: spy moves_8
+  - first:
+      213: -8751669783847903643
+    second: spy moves_9
+  - first:
+      213: -7373486297730681488
+    second: spy moves_10
+  - first:
+      213: -1244953512622864617
+    second: spy moves_11
+  - first:
+      213: -8501638573314617768
+    second: spy moves_12
+  - first:
+      213: -3112356850573887390
+    second: spy moves_13
+  - first:
+      213: 3332241301388024863
+    second: spy moves_14
+  - first:
+      213: 5534096687749583968
+    second: spy moves_15
+  - first:
+      213: -9029839919612516878
+    second: spy moves_16
+  - first:
+      213: -5610303490475684482
+    second: spy moves_17
+  - first:
+      213: -2878420316383250012
+    second: spy moves_18
+  - first:
+      213: 5752118081861543755
+    second: spy moves_19
+  - first:
+      213: 4684855933263902602
+    second: spy moves_20
+  - first:
+      213: 6059263539917836806
+    second: spy moves_21
+  - first:
+      213: -4563676668311004872
+    second: spy moves_22
+  - first:
+      213: -9184792221483242117
+    second: spy moves_23
+  - first:
+      213: -5371046300310812699
+    second: spy moves_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spy moves_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d63339d8c47c8c00800000000000000
+      internalID: 904226031180920530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f6cc919aa13cf40800000000000000
+      internalID: 5747466863039508368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32fa3bdde47058a20800000000000000
+      internalID: 3063863156803874595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 207
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8df1ca7d703e410800000000000000
+      internalID: 1505055323359009014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 207
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f187d77ae9321a60800000000000000
+      internalID: 7643235196796895736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ba1bdaccf01fd20800000000000000
+      internalID: 3310444572855872361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb9812d49ec319690800000000000000
+      internalID: -7597224123678225989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a6f0bab10b8ee20800000000000000
+      internalID: 3380145153222077047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_8
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ca6d554b337f520800000000000000
+      internalID: 2735712148278127721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_9
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ed93e23b2db8680800000000000000
+      internalID: -8751669783847903643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0757d83574d1ca990800000000000000
+      internalID: -7373486297730681488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_11
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7174d36506909bee0800000000000000
+      internalID: -1244953512622864617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_12
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ec2dcd2cc140a80800000000000000
+      internalID: -8501638573314617768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_13
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2683a433fefaec4d0800000000000000
+      internalID: -3112356850573887390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_14
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c5e130fcf7e3e20800000000000000
+      internalID: 3332241301388024863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 064daf9dd9f0dcc40800000000000000
+      internalID: 5534096687749583968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_16
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5aadc6f609fa280800000000000000
+      internalID: -9029839919612516878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_17
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d001833b23422b0800000000000000
+      internalID: -5610303490475684482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_18
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a975b709fbcd08d0800000000000000
+      internalID: -2878420316383250012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_19
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b47657f5be0a3df40800000000000000
+      internalID: 5752118081861543755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a87731e56a3f30140800000000000000
+      internalID: 4684855933263902602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_21
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60257411614d61450800000000000000
+      internalID: 6059263539917836806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_22
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8399593ef309aa0c0800000000000000
+      internalID: -4563676668311004872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_23
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d68be3320198080800000000000000
+      internalID: -9184792221483242117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spy moves_24
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e74ccdc8d53675b0800000000000000
+      internalID: -5371046300310812699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      spy moves_0: 904226031180920530
+      spy moves_1: 5747466863039508368
+      spy moves_10: -7373486297730681488
+      spy moves_11: -1244953512622864617
+      spy moves_12: -8501638573314617768
+      spy moves_13: -3112356850573887390
+      spy moves_14: 3332241301388024863
+      spy moves_15: 5534096687749583968
+      spy moves_16: -9029839919612516878
+      spy moves_17: -5610303490475684482
+      spy moves_18: -2878420316383250012
+      spy moves_19: 5752118081861543755
+      spy moves_2: 3063863156803874595
+      spy moves_20: 4684855933263902602
+      spy moves_21: 6059263539917836806
+      spy moves_22: -4563676668311004872
+      spy moves_23: -9184792221483242117
+      spy moves_24: -5371046300310812699
+      spy moves_3: 1505055323359009014
+      spy moves_4: 7643235196796895736
+      spy moves_5: 3310444572855872361
+      spy moves_6: -7597224123678225989
+      spy moves_7: 3380145153222077047
+      spy moves_8: 2735712148278127721
+      spy moves_9: -8751669783847903643
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

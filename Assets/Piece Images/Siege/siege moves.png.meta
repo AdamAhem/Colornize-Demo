@@ -1,0 +1,1391 @@
+fileFormatVersion: 2
+guid: 95b1f12eab7a7a1459664d5e8f8906ef
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2545171201586458
+    second: siege moves_0
+  - first:
+      213: 2878150115200468627
+    second: siege moves_1
+  - first:
+      213: 468377245486540974
+    second: siege moves_2
+  - first:
+      213: -6736430355567034888
+    second: siege moves_3
+  - first:
+      213: 111843067083162238
+    second: siege moves_4
+  - first:
+      213: 4005363859610382497
+    second: siege moves_5
+  - first:
+      213: 5157043892606549039
+    second: siege moves_6
+  - first:
+      213: 3802087211442606119
+    second: siege moves_7
+  - first:
+      213: -6880804420955250636
+    second: siege moves_8
+  - first:
+      213: 4463131223128071599
+    second: siege moves_9
+  - first:
+      213: -4707709180691806960
+    second: siege moves_10
+  - first:
+      213: 3896437949299291498
+    second: siege moves_11
+  - first:
+      213: 4632738375152863727
+    second: siege moves_12
+  - first:
+      213: -3075795598709355016
+    second: siege moves_13
+  - first:
+      213: 2693189369203365066
+    second: siege moves_14
+  - first:
+      213: 7352192550395819336
+    second: siege moves_15
+  - first:
+      213: 5119098166291396459
+    second: siege moves_16
+  - first:
+      213: 8353630729681442999
+    second: siege moves_17
+  - first:
+      213: 688237220474217419
+    second: siege moves_18
+  - first:
+      213: 6192814165154118406
+    second: siege moves_19
+  - first:
+      213: 5509992436059565845
+    second: siege moves_20
+  - first:
+      213: -5373560842491376845
+    second: siege moves_21
+  - first:
+      213: -1408333605565893063
+    second: siege moves_22
+  - first:
+      213: 6267099814143254245
+    second: siege moves_23
+  - first:
+      213: -3599500885770812067
+    second: siege moves_24
+  - first:
+      213: -2312779173952046238
+    second: siege moves_25
+  - first:
+      213: -1960895125174187730
+    second: siege moves_26
+  - first:
+      213: 6303617910020313607
+    second: siege moves_27
+  - first:
+      213: 5028258755607378749
+    second: siege moves_28
+  - first:
+      213: -1193484754203087585
+    second: siege moves_29
+  - first:
+      213: -8469003690020396004
+    second: siege moves_30
+  - first:
+      213: -3868082664772073621
+    second: siege moves_31
+  - first:
+      213: 5170810733250598641
+    second: siege moves_32
+  - first:
+      213: 2419025628424303729
+    second: siege moves_33
+  - first:
+      213: -3725929851762942036
+    second: siege moves_34
+  - first:
+      213: 5421688709008872481
+    second: siege moves_35
+  - first:
+      213: -3846967061477944189
+    second: siege moves_36
+  - first:
+      213: -6273158997784038601
+    second: siege moves_37
+  - first:
+      213: 5878822776354788240
+    second: siege moves_38
+  - first:
+      213: -1298446649377969801
+    second: siege moves_39
+  - first:
+      213: 5179741328999673061
+    second: siege moves_40
+  - first:
+      213: -865017211217213633
+    second: siege moves_41
+  - first:
+      213: 5363393965581608586
+    second: siege moves_42
+  - first:
+      213: -9126453709947970371
+    second: siege moves_43
+  - first:
+      213: 4213037772211604039
+    second: siege moves_44
+  - first:
+      213: 8669904510665465596
+    second: siege moves_45
+  - first:
+      213: -3498002148979366289
+    second: siege moves_46
+  - first:
+      213: -3865090252188177928
+    second: siege moves_47
+  - first:
+      213: 266038920696544582
+    second: siege moves_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: siege moves_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 311
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea03a62e25f6fff0800000000000000
+      internalID: -2545171201586458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39606cad74e31f720800000000000000
+      internalID: 2878150115200468627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8e91a8f92008600800000000000000
+      internalID: 468377245486540974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fdb44268446382a0800000000000000
+      internalID: -6736430355567034888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e72051c4da85d8100800000000000000
+      internalID: 111843067083162238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_5
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a0b3408539e59730800000000000000
+      internalID: 4005363859610382497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_6
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 311
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c39edd810819740800000000000000
+      internalID: 5157043892606549039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720971bac2ab3c430800000000000000
+      internalID: 3802087211442606119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_8
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4306600d5d87280a0800000000000000
+      internalID: -6880804420955250636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_9
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fadd084633a30fd30800000000000000
+      internalID: 4463131223128071599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_10
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0150503517bdaaeb0800000000000000
+      internalID: -4707709180691806960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_11
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a65f551bbade21630800000000000000
+      internalID: 3896437949299291498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_12
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe98e44c10bca4040800000000000000
+      internalID: 4632738375152863727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_13
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 259
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fd083103349055d0800000000000000
+      internalID: -3075795598709355016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac499305671206520800000000000000
+      internalID: 2693189369203365066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_15
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845bd96cb2c380660800000000000000
+      internalID: 7352192550395819336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_16
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67f62cf8a0ba0740800000000000000
+      internalID: 5119098166291396459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b81373a3ee0ee370800000000000000
+      internalID: 8353630729681442999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_18
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc361970b1c1d8900800000000000000
+      internalID: 688237220474217419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_19
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bb40a1cab41f550800000000000000
+      internalID: 6192814165154118406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_20
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 207
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f6b6a6dec677c40800000000000000
+      internalID: 5509992436059565845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b4a5452e64d65b0800000000000000
+      internalID: -5373560842491376845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_22
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936fff22c08947ce0800000000000000
+      internalID: -1408333605565893063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_23
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eedce1931639f650800000000000000
+      internalID: 6267099814143254245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_24
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d554deee3010c0ec0800000000000000
+      internalID: -3599500885770812067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_25
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26bbaac489b57efd0800000000000000
+      internalID: -2312779173952046238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_26
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29823ed54089c4e0800000000000000
+      internalID: -1960895125174187730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_27
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7021d865713fa7750800000000000000
+      internalID: 6303617910020313607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3bb9b682b6f7c540800000000000000
+      internalID: 5028258755607378749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_29
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1d61ec70f3ef6fe0800000000000000
+      internalID: -1193484754203087585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_30
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14acdeb30e087a80800000000000000
+      internalID: -8469003690020396004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_31
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b670a647f4fc15ac0800000000000000
+      internalID: -3868082664772073621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_32
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6dd2c37f862c740800000000000000
+      internalID: 5170810733250598641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_33
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174fbc41efa129120800000000000000
+      internalID: 2419025628424303729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_34
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf55a76a86da4cc0800000000000000
+      internalID: -3725929851762942036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124583fc725bd3b40800000000000000
+      internalID: 5421688709008872481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_36
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3849af5f6d3dc9ac0800000000000000
+      internalID: -3846967061477944189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_37
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733798dc02341f8a0800000000000000
+      internalID: -6273158997784038601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_38
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0935a12fa26c59150800000000000000
+      internalID: 5878822776354788240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_39
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 779a700e6adfafde0800000000000000
+      internalID: -1298446649377969801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_40
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec6f679b4322e740800000000000000
+      internalID: 5179741328999673061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_41
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f378cc0fd67def3f0800000000000000
+      internalID: -865017211217213633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8627fc256a9e6a40800000000000000
+      internalID: 5363393965581608586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_43
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc518f64b2585180800000000000000
+      internalID: -9126453709947970371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_44
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ac9fd3887b77a30800000000000000
+      internalID: 4213037772211604039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_45
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe95c2a730b15870800000000000000
+      internalID: 8669904510665465596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_46
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6628862499947fc0800000000000000
+      internalID: -3498002148979366289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_47
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f9af7dc4e07c5ac0800000000000000
+      internalID: -3865090252188177928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: siege moves_48
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64dbb842df821b300800000000000000
+      internalID: 266038920696544582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      siege moves_0: -2545171201586458
+      siege moves_1: 2878150115200468627
+      siege moves_10: -4707709180691806960
+      siege moves_11: 3896437949299291498
+      siege moves_12: 4632738375152863727
+      siege moves_13: -3075795598709355016
+      siege moves_14: 2693189369203365066
+      siege moves_15: 7352192550395819336
+      siege moves_16: 5119098166291396459
+      siege moves_17: 8353630729681442999
+      siege moves_18: 688237220474217419
+      siege moves_19: 6192814165154118406
+      siege moves_2: 468377245486540974
+      siege moves_20: 5509992436059565845
+      siege moves_21: -5373560842491376845
+      siege moves_22: -1408333605565893063
+      siege moves_23: 6267099814143254245
+      siege moves_24: -3599500885770812067
+      siege moves_25: -2312779173952046238
+      siege moves_26: -1960895125174187730
+      siege moves_27: 6303617910020313607
+      siege moves_28: 5028258755607378749
+      siege moves_29: -1193484754203087585
+      siege moves_3: -6736430355567034888
+      siege moves_30: -8469003690020396004
+      siege moves_31: -3868082664772073621
+      siege moves_32: 5170810733250598641
+      siege moves_33: 2419025628424303729
+      siege moves_34: -3725929851762942036
+      siege moves_35: 5421688709008872481
+      siege moves_36: -3846967061477944189
+      siege moves_37: -6273158997784038601
+      siege moves_38: 5878822776354788240
+      siege moves_39: -1298446649377969801
+      siege moves_4: 111843067083162238
+      siege moves_40: 5179741328999673061
+      siege moves_41: -865017211217213633
+      siege moves_42: 5363393965581608586
+      siege moves_43: -9126453709947970371
+      siege moves_44: 4213037772211604039
+      siege moves_45: 8669904510665465596
+      siege moves_46: -3498002148979366289
+      siege moves_47: -3865090252188177928
+      siege moves_48: 266038920696544582
+      siege moves_5: 4005363859610382497
+      siege moves_6: 5157043892606549039
+      siege moves_7: 3802087211442606119
+      siege moves_8: -6880804420955250636
+      siege moves_9: 4463131223128071599
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

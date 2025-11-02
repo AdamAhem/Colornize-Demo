@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d66d6df66bc6c74b8f3212a918c5f7e, type: 3}
-  m_Name: Game Instance Data
+  m_Script: {fileID: 11500000, guid: 33a24769182320e44bc4a06c07c5d01a, type: 3}
+  m_Name: Player Add Piece Event
   m_EditorClassIdentifier: 
-  _piecesPerPlayer: 3
-  _numberOfPlayers: 0
-  _playerConfig: []
+  Description: 'Raised when a player presses the + button (including when a piece
+    is already chosen for that button)
+
+
+    -last updated 2/11/25'

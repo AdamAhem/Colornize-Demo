@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: c9284b0edf5523a47b06c91cc67dd4ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6937125775770015625
+    second: rook moves_0
+  - first:
+      213: -588926494045418788
+    second: rook moves_1
+  - first:
+      213: -7186815518649783486
+    second: rook moves_2
+  - first:
+      213: -7892319382360582576
+    second: rook moves_3
+  - first:
+      213: 6107656633328435352
+    second: rook moves_4
+  - first:
+      213: 4333278673080488339
+    second: rook moves_5
+  - first:
+      213: 3855923432068691066
+    second: rook moves_6
+  - first:
+      213: -6749886671395718394
+    second: rook moves_7
+  - first:
+      213: 4470207934610810531
+    second: rook moves_8
+  - first:
+      213: 450850782631063504
+    second: rook moves_9
+  - first:
+      213: 4709564647869361963
+    second: rook moves_10
+  - first:
+      213: -6435474885220619803
+    second: rook moves_11
+  - first:
+      213: -6780421912025210381
+    second: rook moves_12
+  - first:
+      213: -5017898633022159828
+    second: rook moves_13
+  - first:
+      213: 1755215633628407208
+    second: rook moves_14
+  - first:
+      213: 6344142951639267755
+    second: rook moves_15
+  - first:
+      213: 2652170044484085989
+    second: rook moves_16
+  - first:
+      213: -5862657803715421888
+    second: rook moves_17
+  - first:
+      213: 4830308904850432333
+    second: rook moves_18
+  - first:
+      213: 3403704868362670920
+    second: rook moves_19
+  - first:
+      213: 1017230804925549943
+    second: rook moves_20
+  - first:
+      213: -772973590511185835
+    second: rook moves_21
+  - first:
+      213: 2300743031127907370
+    second: rook moves_22
+  - first:
+      213: -8127676134383130105
+    second: rook moves_23
+  - first:
+      213: -7925368134919909802
+    second: rook moves_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rook moves_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a954dd4a5fb6ddd418d2de16dd84720a
+      internalID: 1776514159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 23ef1013400abe14b98a1e88ece86e2d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      rook moves_0: 1776514159
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

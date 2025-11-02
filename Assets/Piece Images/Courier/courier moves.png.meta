@@ -1,0 +1,1391 @@
+fileFormatVersion: 2
+guid: 9345760512a679f4b94a09f64b8c88f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8021715826642312290
+    second: courier moves_0
+  - first:
+      213: 71855621711073487
+    second: courier moves_1
+  - first:
+      213: 7715411792538542062
+    second: courier moves_2
+  - first:
+      213: 3682961764140678974
+    second: courier moves_3
+  - first:
+      213: -7638502964656080827
+    second: courier moves_4
+  - first:
+      213: -1606886213713941986
+    second: courier moves_5
+  - first:
+      213: -6736603770656070222
+    second: courier moves_6
+  - first:
+      213: 8083710404504887497
+    second: courier moves_7
+  - first:
+      213: -7530124789821463768
+    second: courier moves_8
+  - first:
+      213: 2993485121187451383
+    second: courier moves_9
+  - first:
+      213: 8223757810345700391
+    second: courier moves_10
+  - first:
+      213: -4540159136140172362
+    second: courier moves_11
+  - first:
+      213: 4094532376141285585
+    second: courier moves_12
+  - first:
+      213: 4918731860251336735
+    second: courier moves_13
+  - first:
+      213: 4159253973232890242
+    second: courier moves_14
+  - first:
+      213: -7972609777980975827
+    second: courier moves_15
+  - first:
+      213: 713643359737680564
+    second: courier moves_16
+  - first:
+      213: -3719988661504564930
+    second: courier moves_17
+  - first:
+      213: -1563217098765424257
+    second: courier moves_18
+  - first:
+      213: -5213580153696736650
+    second: courier moves_19
+  - first:
+      213: -8489966768618959554
+    second: courier moves_20
+  - first:
+      213: -2689027605663338717
+    second: courier moves_21
+  - first:
+      213: 4970300813536843069
+    second: courier moves_22
+  - first:
+      213: 3089836610863831135
+    second: courier moves_23
+  - first:
+      213: 8498878442355002593
+    second: courier moves_24
+  - first:
+      213: 628670905642920132
+    second: courier moves_25
+  - first:
+      213: -1736856181115110742
+    second: courier moves_26
+  - first:
+      213: 1042014159040556183
+    second: courier moves_27
+  - first:
+      213: 2139232564920655996
+    second: courier moves_28
+  - first:
+      213: 7243931928735595589
+    second: courier moves_29
+  - first:
+      213: -6654587234319468962
+    second: courier moves_30
+  - first:
+      213: 4096244802389250616
+    second: courier moves_31
+  - first:
+      213: -8224523938929248943
+    second: courier moves_32
+  - first:
+      213: 1021652687065762205
+    second: courier moves_33
+  - first:
+      213: -7304822007832668227
+    second: courier moves_34
+  - first:
+      213: -6942625492271485959
+    second: courier moves_35
+  - first:
+      213: -1577137786627688656
+    second: courier moves_36
+  - first:
+      213: 7916766560020150833
+    second: courier moves_37
+  - first:
+      213: -854654381721585006
+    second: courier moves_38
+  - first:
+      213: -5049987200011976230
+    second: courier moves_39
+  - first:
+      213: 7363065668051436902
+    second: courier moves_40
+  - first:
+      213: -7892441373886513607
+    second: courier moves_41
+  - first:
+      213: 1579054645260381692
+    second: courier moves_42
+  - first:
+      213: 5961677774126222811
+    second: courier moves_43
+  - first:
+      213: -47285166312975006
+    second: courier moves_44
+  - first:
+      213: -8356247791301308571
+    second: courier moves_45
+  - first:
+      213: 6953368816880984400
+    second: courier moves_46
+  - first:
+      213: -3653812262486900928
+    second: courier moves_47
+  - first:
+      213: 3235960488513378365
+    second: courier moves_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: courier moves_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 311
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e932bdfd4f32da090800000000000000
+      internalID: -8021715826642312290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc01437ae484ff000800000000000000
+      internalID: 71855621711073487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_2
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef9e16b526a21b60800000000000000
+      internalID: 7715411792538542062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_3
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f73f816328c1330800000000000000
+      internalID: 3682961764140678974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 548f7ef26069ef590800000000000000
+      internalID: -7638502964656080827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_5
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 311
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1aab15908133b9e0800000000000000
+      internalID: -1606886213713941986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_6
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 311
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5ec790096c282a0800000000000000
+      internalID: -6736603770656070222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c0a4a798cb1f2070800000000000000
+      internalID: 8083710404504887497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_8
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8232454666f9f7790800000000000000
+      internalID: -7530124789821463768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_9
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f19bc88bdefa8920800000000000000
+      internalID: 2993485121187451383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_10
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72cef7c3828a02270800000000000000
+      internalID: 8223757810345700391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_11
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b3ee9a025d1ef0c0800000000000000
+      internalID: -4540159136140172362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_12
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 259
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d8cc399083b2d830800000000000000
+      internalID: 4094532376141285585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_13
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 259
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f106dabf098d24440800000000000000
+      internalID: 4918731860251336735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281bd25b373a8b930800000000000000
+      internalID: 4159253973232890242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_15
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2553aac5a99b5190800000000000000
+      internalID: -7972609777980975827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_16
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b21b79cade57e900800000000000000
+      internalID: 713643359737680564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e312a8e8502ff5cc0800000000000000
+      internalID: -3719988661504564930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_18
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f792549b4565e4ae0800000000000000
+      internalID: -1563217098765424257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_19
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 207
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a21e21974a5a7b0800000000000000
+      internalID: -5213580153696736650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_20
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 207
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3d8899a4349d2a80800000000000000
+      internalID: -8489966768618959554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32fa735c3a7aeaad0800000000000000
+      internalID: -2689027605663338717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_22
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35d2b1914e0af440800000000000000
+      internalID: 4970300813536843069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_23
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f581984e60e41ea20800000000000000
+      internalID: 3089836610863831135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_24
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec8bc11ae412f570800000000000000
+      internalID: 8498878442355002593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_25
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8287b9bdc79b800800000000000000
+      internalID: 628670905642920132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_26
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 155
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa31ba618275e7e0800000000000000
+      internalID: -1736856181115110742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_27
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 155
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c2a885b5af57e00800000000000000
+      internalID: 1042014159040556183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c702b040fa410bd10800000000000000
+      internalID: 2139232564920655996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_29
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c356d85bd978460800000000000000
+      internalID: 7243931928735595589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_30
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56f98bfa2826a3a0800000000000000
+      internalID: -6654587234319468962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_31
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8329377e1f8c8d830800000000000000
+      internalID: 4096244802389250616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_32
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155fc6d8d0f9cdd80800000000000000
+      internalID: -8224523938929248943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_33
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 103
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99c068b4b3ad2e00800000000000000
+      internalID: 1021652687065762205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_34
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 103
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db79da3261f00aa90800000000000000
+      internalID: -7304822007832668227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb269cf5e6d6af90800000000000000
+      internalID: -6942625492271485959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_36
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037f5320a81ec1ae0800000000000000
+      internalID: -1577137786627688656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_37
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13a31b3dd310edd60800000000000000
+      internalID: 7916766560020150833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_38
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29af0c33e58a324f0800000000000000
+      internalID: -854654381721585006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_39
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad14407c567dae9b0800000000000000
+      internalID: -5049987200011976230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_40
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 51
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6658412c63dde2660800000000000000
+      internalID: 7363065668051436902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_41
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 51
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ef5eae26a687290800000000000000
+      internalID: -7892441373886513607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdecab65dde9e510800000000000000
+      internalID: 1579054645260381692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_43
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdd822869522cb250800000000000000
+      internalID: 5961677774126222811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_44
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26515ca4462085ff0800000000000000
+      internalID: -47285166312975006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_45
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fc75838e4a80c80800000000000000
+      internalID: -8356247791301308571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_46
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051287239145f7060800000000000000
+      internalID: 6953368816880984400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_47
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 0
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f70822b1d0b4dc0800000000000000
+      internalID: -3653812262486900928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: courier moves_48
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d381a016be078ec20800000000000000
+      internalID: 3235960488513378365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      courier moves_0: -8021715826642312290
+      courier moves_1: 71855621711073487
+      courier moves_10: 8223757810345700391
+      courier moves_11: -4540159136140172362
+      courier moves_12: 4094532376141285585
+      courier moves_13: 4918731860251336735
+      courier moves_14: 4159253973232890242
+      courier moves_15: -7972609777980975827
+      courier moves_16: 713643359737680564
+      courier moves_17: -3719988661504564930
+      courier moves_18: -1563217098765424257
+      courier moves_19: -5213580153696736650
+      courier moves_2: 7715411792538542062
+      courier moves_20: -8489966768618959554
+      courier moves_21: -2689027605663338717
+      courier moves_22: 4970300813536843069
+      courier moves_23: 3089836610863831135
+      courier moves_24: 8498878442355002593
+      courier moves_25: 628670905642920132
+      courier moves_26: -1736856181115110742
+      courier moves_27: 1042014159040556183
+      courier moves_28: 2139232564920655996
+      courier moves_29: 7243931928735595589
+      courier moves_3: 3682961764140678974
+      courier moves_30: -6654587234319468962
+      courier moves_31: 4096244802389250616
+      courier moves_32: -8224523938929248943
+      courier moves_33: 1021652687065762205
+      courier moves_34: -7304822007832668227
+      courier moves_35: -6942625492271485959
+      courier moves_36: -1577137786627688656
+      courier moves_37: 7916766560020150833
+      courier moves_38: -854654381721585006
+      courier moves_39: -5049987200011976230
+      courier moves_4: -7638502964656080827
+      courier moves_40: 7363065668051436902
+      courier moves_41: -7892441373886513607
+      courier moves_42: 1579054645260381692
+      courier moves_43: 5961677774126222811
+      courier moves_44: -47285166312975006
+      courier moves_45: -8356247791301308571
+      courier moves_46: 6953368816880984400
+      courier moves_47: -3653812262486900928
+      courier moves_48: 3235960488513378365
+      courier moves_5: -1606886213713941986
+      courier moves_6: -6736603770656070222
+      courier moves_7: 8083710404504887497
+      courier moves_8: -7530124789821463768
+      courier moves_9: 2993485121187451383
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
