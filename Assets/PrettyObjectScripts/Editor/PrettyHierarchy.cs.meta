@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b59a28da3471f42a68f50993b548e794
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201639
+  packageName: Pretty Objects
+  packageVersion: 1.0
+  assetPath: Assets/PrettyObjectScripts/Editor/PrettyHierarchy.cs
+  uploadId: 461381

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 36665639f586e446685b4af17c9cad59
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 201639
+  packageName: Pretty Objects
+  packageVersion: 1.0
+  assetPath: Assets/PrettyObjectScripts/Utils/EditorUtils.cs
+  uploadId: 461381

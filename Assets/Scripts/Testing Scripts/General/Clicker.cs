@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Clicker : MonoBehaviour, IPointerClickHandler
+namespace Game
 {
-    public void OnPointerClick(PointerEventData eventData)
+    public class Clicker : MonoBehaviour, IPointerClickHandler
     {
-        Debug.Log("clicked successfully");
-        Debug.Log(eventData);
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            Debug.Log("clicked successfully");
+            Debug.Log(eventData);
+        }
     }
 }
