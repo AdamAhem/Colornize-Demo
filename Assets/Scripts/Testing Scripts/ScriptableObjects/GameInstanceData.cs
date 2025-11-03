@@ -20,13 +20,16 @@ namespace Game
         [SerializeField][ReadOnly] private int _lastClickedRow;
         [SerializeField][ReadOnly] private int _lastClickedColumn;
 
+
+        private CellStatus[][] _boardStatus;
+
         public void SetLastClickedCellInfo(int row, int column)
         {
             _lastClickedRow = row;
             _lastClickedColumn = column;
         }
 
-        public Vector2 LastClickedCell => new Vector2(_lastClickedRow, _lastClickedColumn);
+        public Vector2 LastCellPositionClicked => new Vector2(_lastClickedRow, _lastClickedColumn);
 
         public void ResetData()
         {
@@ -35,6 +38,36 @@ namespace Game
 
             _lastClickedRow = 0;
             _lastClickedColumn = 0;
+
+            _boardStatus = null;
+        }
+
+        public void GenerateNewBoard(int rows, int columns)
+        {
+            _boardStatus = new CellStatus[rows][];
+
+            for (int row = 0; row < rows; row++)
+            {
+                _boardStatus[row] = new CellStatus[columns];
+            }
+
+        }
+
+        public void InitializeBoardPosition(int row, int column, BoardCell cell)
+        {
+            _boardStatus[row][column] = new CellStatus(cell);
+        }
+
+        public CellStatus LastClickedCellStatus => _boardStatus[(int)LastCellPositionClicked.x][(int)LastCellPositionClicked.y];
+
+        public CellStatus GetCellStatusAtPosition(int row, int column)
+        {
+            return _boardStatus[row][column];
+        }
+
+        public CellStatus GetCellStatusAtPosition(Vector2 coordinate)
+        {
+            return GetCellStatusAtPosition((int)coordinate.x, (int)coordinate.y);
         }
 
         public void GenerateNewPlayerConfigs(int playerCount)

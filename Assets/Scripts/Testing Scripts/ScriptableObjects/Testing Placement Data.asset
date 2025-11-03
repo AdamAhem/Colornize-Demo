@@ -17,9 +17,9 @@ MonoBehaviour:
   _playerConfig:
   - PlayerID: 0
     PieceIDs: 000000000100000002000000
-  - PlayerID: 0
+  - PlayerID: 1
     PieceIDs: 030000000400000005000000
-  - PlayerID: 0
+  - PlayerID: 2
     PieceIDs: 070000000800000009000000
-  _lastClickedRow: 2
-  _lastClickedColumn: 1
+  _lastClickedRow: 5
+  _lastClickedColumn: 8

@@ -125,10 +125,6 @@ namespace Game
             // only when the player clicks confirm, will the next player get to choose where to place their piece.
 
             // players can choose ANY of their 3 pieces to place first, but will only place them 1 at a time.
-
-
-
-
         }
 
         private void EnablePlacement()

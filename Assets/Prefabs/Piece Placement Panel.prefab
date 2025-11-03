@@ -818,6 +818,8 @@ MonoBehaviour:
   _colors: {fileID: 11400000, guid: 47fddb40360f4d046b0a826fa5ed535c, type: 2}
   _inactiveTextColor: {r: 1, g: 1, b: 1, a: 1}
   _inactiveBackgroundColor: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 1}
+  _defaultButtonBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  _instanceData: {fileID: 11400000, guid: dd33acce3b327c94996e9a2e5ce1d773, type: 2}
 --- !u!1 &8542962472459576924
 GameObject:
   m_ObjectHideFlags: 0

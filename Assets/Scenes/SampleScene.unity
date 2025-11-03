@@ -3560,7 +3560,7 @@ MonoBehaviour:
   _gameData: {fileID: 11400000, guid: dd33acce3b327c94996e9a2e5ce1d773, type: 2}
   _catalog: {fileID: 11400000, guid: 9e8ef51f4bc3a1a42bda9f4a1cdcc78e, type: 2}
   _clickCellEvent: {fileID: 11400000, guid: 547cd002ea7e8f942aa6cdd6355e9a89, type: 2}
-  _pieceSelected: 0
+  _currentState: 0
   _currentPlayerIndex: 0
   _currentPlayerSlotSelected: 0
 --- !u!1 &1241766560
@@ -3710,10 +3710,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a702733a026841d498d7c3a52f88e34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cellRenderer: {fileID: 0}
+  _highlightRenderer: {fileID: 0}
+  _activeHighlightAlpha: 0
+  _inactiveHighlightAlpha: 0
+  _possibleMoveSprite: {fileID: 0}
   _row: 0
   _column: 0
   _clickCellEvent: {fileID: 0}
   _gameData: {fileID: 0}
+  _pieceCatalog: {fileID: 0}
+  _colors: {fileID: 0}
 --- !u!1001 &1282041961
 PrefabInstance:
   m_ObjectHideFlags: 0

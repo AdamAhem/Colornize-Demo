@@ -14,9 +14,10 @@ namespace Game
 
         [SerializeField] private GameInstanceData _instanceData;
 
-        [ContextMenu("Build board")]
         public void BuildBoard()
         {
+            _instanceData.GenerateNewBoard(_rows, _columns);
+
             Vector2 corner1Pos = _corner1.position;
             Vector2 corner2Pos = _corner2.position;
 
@@ -36,6 +37,8 @@ namespace Game
                 newCell.transform.localScale *= _cellScale;
 
                 newCell.SetRowAndColumn(currentRow, currentCol);
+
+                _instanceData.InitializeBoardPosition(currentRow, currentCol, newCell);
             }
         }
     }
