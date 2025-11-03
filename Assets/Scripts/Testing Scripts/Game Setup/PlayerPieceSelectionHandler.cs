@@ -6,9 +6,6 @@ namespace Game
 {
     public class PlayerPieceSelectionHandler : MonoBehaviour
     {
-        // by default, they are all active (because in the editor their add buttons are visible)
-        [SerializeField][ReadOnly] private bool _isActive = true;
-
         [SerializeField] private int _playerID;
 
         [Header("Slots")]
@@ -18,6 +15,7 @@ namespace Game
 
         [Header("Player panel visuals")]
         [SerializeField] private Image _playerPanelImage;
+        [SerializeField] private Image _colorImage;
 
         [SerializeField] private GameObject[] _objectsShownWhileActive;
         [SerializeField] private TMP_Text _playerNumberText;
@@ -32,22 +30,13 @@ namespace Game
         [SerializeField] private float _inactiveTextHeight;
 
         [SerializeField] private Color _defaultButtonColor;
-        [SerializeField] private Color _playerColor;
+        [SerializeField] private Colors _colors;
 
         [Header("Selection State")]
         [SerializeField] private SelectionStateData _selectionStateData;
 
         public void SetActive()
         {
-            if (_isActive)
-            {
-                //Debug.Log($"<color=#00ffff>{gameObject.name} is already active");
-                return;
-            }
-
-            //Debug.Log($"<color=#00ff00>{gameObject.name} - activated");
-            _isActive = true;
-
             // display 3 piece icons and color selector and set player name position to top
             for (int i = 0; i < _objectsShownWhileActive.Length; i++)
             {
@@ -56,6 +45,7 @@ namespace Game
 
             _playerPanelImage.color = _activePanelImageColor;
             _playerNumberText.color = _activeTextColor;
+            _colorImage.color = _colors.List[_playerID];
 
             Vector2 textPos = _playerNumberText.rectTransform.anchoredPosition;
 
@@ -65,9 +55,6 @@ namespace Game
             for (int i = 0; i < _selectedPieceImages.Length; i++)
             {
                 var pieceImage = _selectedPieceImages[i];
-
-                Debug.Log("this happened");
-
                 pieceImage.color = Color.clear;
                 pieceImage.sprite = null;
             }
@@ -80,15 +67,6 @@ namespace Game
 
         public void SetInactive()
         {
-            if (!_isActive)
-            {
-                //Debug.Log($"<color=#ffff00>{gameObject.name} is already inactive");
-                return;
-            }
-
-            //Debug.Log($"<color=#ff0000>{gameObject.name} - deactivated");
-            _isActive = false;
-
             // hide 3 piece icons and color selector and set player name position to center
             for (int i = 0; i < _objectsShownWhileActive.Length; i++)
             {
@@ -107,7 +85,7 @@ namespace Game
         {
             if (_selectionStateData.PlayerAddingPiece) return;
 
-            _buttonBackgroundImages[slotID].color = _playerColor;
+            _buttonBackgroundImages[slotID].color = _colors.List[_playerID];
 
             _selectionStateData.SetPlayerAndPieceSelected(_playerID, slotID);
         }

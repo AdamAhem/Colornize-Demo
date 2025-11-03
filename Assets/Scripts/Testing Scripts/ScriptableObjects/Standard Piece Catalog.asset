@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc2a1961faa78b44b739c0cbc2f72a0, type: 3}
+  m_Name: Standard Piece Catalog
+  m_EditorClassIdentifier: 
+  _info:
+  - _id: 0
+    _name: Rook
+    _icon: {fileID: 21300000, guid: c38a1e30e74ae2d4cb4066b3a7e3070d, type: 3}
+  - _id: 1
+    _name: Bishop
+    _icon: {fileID: 21300000, guid: 8523caf1b4c0e7444b865885790ea8ff, type: 3}
+  - _id: 2
+    _name: Scout
+    _icon: {fileID: 21300000, guid: f3327e2ecd88b354baa3bbb518fd0cfe, type: 3}
+  - _id: 3
+    _name: Knight
+    _icon: {fileID: 21300000, guid: 4e8b1bf61dd311148b25cc8f902dcb5d, type: 3}
+  - _id: 4
+    _name: Commander
+    _icon: {fileID: 21300000, guid: efe4cb2308c46cd4683971ed39702653, type: 3}
+  - _id: 5
+    _name: Spy
+    _icon: {fileID: 21300000, guid: 0420c5ea3cd2a3f40925ee6903201e18, type: 3}
+  - _id: 6
+    _name: Oracle
+    _icon: {fileID: 21300000, guid: 30ad217071fdf52498e341caa9b7bae7, type: 3}
+  - _id: 7
+    _name: Siege
+    _icon: {fileID: 21300000, guid: 01702e22da0abc7468032086674cde2a, type: 3}
+  - _id: 8
+    _name: Courier
+    _icon: {fileID: 21300000, guid: 9c9feb9d76979084bae395088f82cb2a, type: 3}
+  - _id: 9
+    _name: Captain
+    _icon: {fileID: 21300000, guid: d8ac1e49aab75d041a312320056a0dab, type: 3}
