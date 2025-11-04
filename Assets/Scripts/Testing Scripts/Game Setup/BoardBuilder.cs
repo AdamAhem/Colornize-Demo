@@ -38,6 +38,7 @@ namespace Game
 
                 newCell.SetRowAndColumn(currentRow, currentCol);
 
+                newCell.SetGameData(_instanceData);
                 _instanceData.InitializeBoardPosition(currentRow, currentCol, newCell);
             }
         }

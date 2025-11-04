@@ -16,7 +16,9 @@ namespace Game
         [SerializeField] private PlayerSelectionManager _playerSelectionManager;
         [SerializeField] private float _selectionPageFadeDuration;
         [SerializeField] private PiecePlacementManager _placementManager;
+        [SerializeField] private GameObject _placementMain;
         [SerializeField] private BoardBuilder _boardBuilder;
+        [SerializeField] private GameplayManager _gameplayManager;
 
         [Header("Scriptable Objects")]
         [SerializeField] private GameInstanceData _gameData;
@@ -45,7 +47,7 @@ namespace Game
             {
                 case GamePhase.Selection: InitializeSelection(); break;
                 case GamePhase.Placement: InitializePlacement(); break;
-                case GamePhase.Gameplay: break;
+                case GamePhase.Gameplay: InitializeGameplay(); break;
             }
         }
 
@@ -55,7 +57,7 @@ namespace Game
             {
                 case GamePhase.Selection: EnableSelection(); break;
                 case GamePhase.Placement: EnablePlacement(); break;
-                case GamePhase.Gameplay: break;
+                case GamePhase.Gameplay: EnableGameplay(); break;
             }
         }
 
@@ -65,7 +67,7 @@ namespace Game
             {
                 case GamePhase.Selection: DisableSelection(); break;
                 case GamePhase.Placement: DisablePlacement(); break;
-                case GamePhase.Gameplay: break;
+                case GamePhase.Gameplay: DisableGameplay(); break;
             }
         }
 
@@ -77,7 +79,7 @@ namespace Game
             {
                 case GamePhase.Selection: ResetSelection(); break;
                 case GamePhase.Placement: ResetPlacement(); break;
-                case GamePhase.Gameplay: break;
+                case GamePhase.Gameplay: ResetGameplay(); break;
             }
         }
 
@@ -111,27 +113,12 @@ namespace Game
         private void InitializePlacement()
         {
             _playerSelectionManager.FadeOut(0);
-
             _placementManager.Initialize();
-
-            // display the BOARD and the PLACEMENT PANEL
-
-            // how will the placement panel work?
-
-            // start with player 0. they will select one of their pieces and choose a spot on the board to place it.
-
-            // player 0 can then either confirm (by clicking the confirm button) or undo (by left-clicking their placed piece).
-
-            // only when the player clicks confirm, will the next player get to choose where to place their piece.
-
-            // players can choose ANY of their 3 pieces to place first, but will only place them 1 at a time.
         }
 
         private void EnablePlacement()
         {
             _placementManager.Enable();
-
-            // enable the grid.
             _boardBuilder.BuildBoard();
         }
 
@@ -141,6 +128,33 @@ namespace Game
         }
 
         private void ResetPlacement()
+        {
+
+        }
+
+        #endregion
+
+        #region gameplay methods
+
+        private void InitializeGameplay()
+        {
+            _playerSelectionManager.FadeOut(0);
+            _placementMain.SetActive(false);
+            _boardBuilder.BuildBoard();
+            _gameplayManager.Initialize();
+        }
+
+        private void EnableGameplay()
+        {
+            _gameplayManager.Enable();
+        }
+
+        private void DisableGameplay()
+        {
+            _gameplayManager.Disable();
+        }
+
+        private void ResetGameplay()
         {
 
         }

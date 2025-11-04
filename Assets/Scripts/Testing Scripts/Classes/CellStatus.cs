@@ -23,5 +23,10 @@ namespace Game
 
         public void SetPlayerID(int playerID) => _playerID = playerID;
         public void SetPieceID(int pieceID) => _pieceID = pieceID;
+
+        public Vector2[] GetAndHighlightPossibleMoves()
+        {
+            return _cell.GetAndHighlightPossibleMoves(_playerID, _pieceID);
+        }
     }
 }

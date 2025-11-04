@@ -19,9 +19,10 @@ namespace Game
         [Header("Most Recent Clicked Cell")]
         [SerializeField][ReadOnly] private int _lastClickedRow;
         [SerializeField][ReadOnly] private int _lastClickedColumn;
-
+        [SerializeField][ReadOnly] private Vector2 _boardDimensions;
 
         private CellStatus[][] _boardStatus;
+        private List<Vector2> _movesList;
 
         public void SetLastClickedCellInfo(int row, int column)
         {
@@ -30,6 +31,8 @@ namespace Game
         }
 
         public Vector2 LastCellPositionClicked => new Vector2(_lastClickedRow, _lastClickedColumn);
+
+        public Vector2 BoardDimensions => _boardDimensions;
 
         public void ResetData()
         {
@@ -40,17 +43,18 @@ namespace Game
             _lastClickedColumn = 0;
 
             _boardStatus = null;
+            _movesList = new List<Vector2>(Defaults.MAX_POSSIBLE_MOVES);
         }
 
         public void GenerateNewBoard(int rows, int columns)
         {
             _boardStatus = new CellStatus[rows][];
+            _boardDimensions = new Vector2(rows, columns);
 
             for (int row = 0; row < rows; row++)
             {
                 _boardStatus[row] = new CellStatus[columns];
             }
-
         }
 
         public void InitializeBoardPosition(int row, int column, BoardCell cell)

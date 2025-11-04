@@ -16,30 +16,40 @@ MonoBehaviour:
   - _id: 0
     _name: Rook
     _icon: {fileID: 21300000, guid: c38a1e30e74ae2d4cb4066b3a7e3070d, type: 3}
+    _move: {fileID: 11400000, guid: 7902e00d7e3a645409662b9248c95cb9, type: 2}
   - _id: 1
     _name: Bishop
     _icon: {fileID: 21300000, guid: 8523caf1b4c0e7444b865885790ea8ff, type: 3}
+    _move: {fileID: 11400000, guid: 2568bcc4df1af7049bd9d92e226b7b96, type: 2}
   - _id: 2
     _name: Scout
     _icon: {fileID: 21300000, guid: f3327e2ecd88b354baa3bbb518fd0cfe, type: 3}
+    _move: {fileID: 0}
   - _id: 3
     _name: Knight
     _icon: {fileID: 21300000, guid: 4e8b1bf61dd311148b25cc8f902dcb5d, type: 3}
+    _move: {fileID: 11400000, guid: 6a284cdf4ee2fdd46b50c196bfe1af81, type: 2}
   - _id: 4
     _name: Commander
     _icon: {fileID: 21300000, guid: efe4cb2308c46cd4683971ed39702653, type: 3}
+    _move: {fileID: 11400000, guid: ba17d714f1bbf0240b43fdeec7a772a8, type: 2}
   - _id: 5
     _name: Spy
     _icon: {fileID: 21300000, guid: 0420c5ea3cd2a3f40925ee6903201e18, type: 3}
+    _move: {fileID: 0}
   - _id: 6
     _name: Oracle
     _icon: {fileID: 21300000, guid: 30ad217071fdf52498e341caa9b7bae7, type: 3}
+    _move: {fileID: 0}
   - _id: 7
     _name: Siege
     _icon: {fileID: 21300000, guid: 01702e22da0abc7468032086674cde2a, type: 3}
+    _move: {fileID: 0}
   - _id: 8
     _name: Courier
     _icon: {fileID: 21300000, guid: 9c9feb9d76979084bae395088f82cb2a, type: 3}
+    _move: {fileID: 0}
   - _id: 9
     _name: Captain
     _icon: {fileID: 21300000, guid: d8ac1e49aab75d041a312320056a0dab, type: 3}
+    _move: {fileID: 0}

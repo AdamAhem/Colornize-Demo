@@ -2533,6 +2533,91 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2253657514267410622, guid: 93f742b7094392f4d94ebb96986d441b, type: 3}
   m_PrefabInstance: {fileID: 846789263}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &937204562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937204563}
+  - component: {fileID: 937204564}
+  m_Layer: 0
+  m_Name: Gameplay Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &937204563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937204562}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1955562471}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &937204564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937204562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c51b5bb14acaf44b8d973ab117182b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxMoves: 2
+  _gameData: {fileID: 11400000, guid: fd9761f75c15015469fdb960563f9e30, type: 2}
+  _catalog: {fileID: 11400000, guid: 9e8ef51f4bc3a1a42bda9f4a1cdcc78e, type: 2}
+  _cellClickedEvent: {fileID: 11400000, guid: 547cd002ea7e8f942aa6cdd6355e9a89, type: 2}
+  _playerTurnIndex: 0
+  _movesLeft: 0
+  _pieceSelected: 0
+  _identifiedPiecePosition: {x: 0, y: 0}
+  _currentPossibleMoves: []
+  _usePremadeSettings: 1
+  _premadePiecePlacement:
+    Settings:
+    - PlayerID: 0
+      Pieces:
+      - pieceID: 4
+        row: 2
+        column: 8
+      - pieceID: 1
+        row: 9
+        column: 9
+      - pieceID: 2
+        row: 0
+        column: 8
+    - PlayerID: 1
+      Pieces:
+      - pieceID: 0
+        row: 7
+        column: 1
+      - pieceID: 1
+        row: 9
+        column: 5
+      - pieceID: 2
+        row: 8
+        column: 0
+  _premadeColoredCells:
+  - pieceID: 2
+    row: 2
+    column: 7
+  - pieceID: 0
+    row: 4
+    column: 8
 --- !u!1001 &967917982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3562,7 +3647,7 @@ MonoBehaviour:
   _clickCellEvent: {fileID: 11400000, guid: 547cd002ea7e8f942aa6cdd6355e9a89, type: 2}
   _currentState: 0
   _currentPlayerIndex: 0
-  _currentPlayerSlotSelected: 0
+  _currentSlotIndex: 0
 --- !u!1 &1241766560
 GameObject:
   m_ObjectHideFlags: 0
@@ -3715,6 +3800,7 @@ MonoBehaviour:
   _activeHighlightAlpha: 0
   _inactiveHighlightAlpha: 0
   _possibleMoveSprite: {fileID: 0}
+  _defaultCellColor: {r: 0, g: 0, b: 0, a: 0}
   _row: 0
   _column: 0
   _clickCellEvent: {fileID: 0}
@@ -5013,12 +5099,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada49d1fcc38438409868786c3072418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startPhase: 1
+  _startPhase: 2
   _playerSelectionManager: {fileID: 94698487}
   _selectionPageFadeDuration: 1
   _placementManager: {fileID: 1221956752}
+  _placementMain: {fileID: 1813533023}
   _boardBuilder: {fileID: 1517052822}
-  _gameData: {fileID: 11400000, guid: dd33acce3b327c94996e9a2e5ce1d773, type: 2}
+  _gameplayManager: {fileID: 937204564}
+  _gameData: {fileID: 11400000, guid: fd9761f75c15015469fdb960563f9e30, type: 2}
   _selectionData: {fileID: 11400000, guid: 747b9ad4ab00c71429d6bf820f380b8c, type: 2}
   _defaultColors: {fileID: 11400000, guid: 6042544dae5fe81409ecbac75be427a9, type: 2}
   _gameplayColors: {fileID: 11400000, guid: 47fddb40360f4d046b0a826fa5ed535c, type: 2}
@@ -5401,7 +5489,7 @@ MonoBehaviour:
   _corner1: {fileID: 213438654}
   _corner2: {fileID: 107966317}
   _cellScale: 1.25
-  _instanceData: {fileID: 11400000, guid: dd33acce3b327c94996e9a2e5ce1d773, type: 2}
+  _instanceData: {fileID: 11400000, guid: fd9761f75c15015469fdb960563f9e30, type: 2}
 --- !u!114 &1517052823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6655,6 +6743,7 @@ Transform:
   - {fileID: 1508616267}
   - {fileID: 94698486}
   - {fileID: 1221956751}
+  - {fileID: 937204563}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1955562472

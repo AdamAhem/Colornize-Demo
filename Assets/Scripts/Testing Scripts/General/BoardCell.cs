@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -27,8 +28,9 @@ namespace Game
         [SerializeField] private PieceCatalog _pieceCatalog;
         [SerializeField] private Colors _colors;
 
-
         private bool _active = true;
+
+        public void SetGameData(GameInstanceData gameData) => _gameData = gameData;
 
         public void SetRowAndColumn(int row, int column)
         {
@@ -77,6 +79,11 @@ namespace Game
             _highlightRenderer.color = _colors.List[playerID];
         }
 
+        public void ResetHighlightIcon()
+        {
+            _highlightRenderer.sprite = null;
+        }
+
         public void ClearHighlight()
         {
             _highlightRenderer.sprite = null;
@@ -85,6 +92,61 @@ namespace Game
         public void SetHighlightIconAsPiece(int pieceID)
         {
             _highlightRenderer.sprite = _pieceCatalog.Get(pieceID).Icon;
+        }
+
+        public Vector2[] GetAndHighlightPossibleMoves(int playerID, int pieceID)
+        {
+            // player id for color, piece id for highlight positions.
+            // need to get the board cells of all valid places to click.
+
+            // THIS PART IS ONLY UP TO BOARD DIMENSIONS
+            List<Vector2> potentialMoves = _pieceCatalog.Get(pieceID).GetPossibleMoves(_row, _column, _gameData.BoardDimensions);
+
+            for (int i = potentialMoves.Count - 1; i >= 0; i--)
+            {
+                Vector2 potentialMove = potentialMoves[i];
+                CellStatus potentialCell = _gameData.GetCellStatusAtPosition(potentialMove);
+
+                int cellPlayerID = potentialCell.PlayerID;
+
+                bool uncoloredCell = cellPlayerID == Defaults.PLAYER_ID;
+                bool sameColoredCell = cellPlayerID == playerID;
+                bool cellOccupied = potentialCell.PieceID != Defaults.PIECE_ID;
+
+                // move is only possible if the cell is unoccupied and if the cell is colored none or same color as the player.
+                bool movePossible = !cellOccupied && (uncoloredCell || sameColoredCell);
+
+                if (movePossible)
+                {
+                    potentialCell.Cell.SetHiglhightIconAsPossibleMove(playerID);
+                }
+                else
+                {
+                    potentialMoves.Remove(potentialMove);
+                }
+            }
+
+            return potentialMoves.ToArray();
+        }
+
+        public void UnhighlightPossibleMoves(int playerID, int pieceID)
+        {
+            List<Vector2> possibleMovesWithinBoard = _pieceCatalog.Get(pieceID).GetPossibleMoves(_row, _column, _gameData.BoardDimensions);
+
+            for (int i = possibleMovesWithinBoard.Count - 1; i >= 0; i--)
+            {
+                CellStatus potentialCell = _gameData.GetCellStatusAtPosition(possibleMovesWithinBoard[i]);
+
+                int cellPlayerID = potentialCell.PlayerID;
+
+                bool uncoloredCell = cellPlayerID == Defaults.PLAYER_ID;
+                bool sameColoredCell = cellPlayerID == playerID;
+                bool cellOccupied = potentialCell.PieceID != Defaults.PIECE_ID;
+
+                // move is only possible if the cell is unoccupied and if the cell is colored none or same color as the player.
+
+                if (!cellOccupied && (uncoloredCell || sameColoredCell)) potentialCell.Cell.ResetHighlightIcon();
+            }
         }
     }
 }

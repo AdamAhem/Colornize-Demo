@@ -244,6 +244,6 @@ MonoBehaviour:
   _row: 0
   _column: 0
   _clickCellEvent: {fileID: 11400000, guid: 547cd002ea7e8f942aa6cdd6355e9a89, type: 2}
-  _gameData: {fileID: 11400000, guid: dd33acce3b327c94996e9a2e5ce1d773, type: 2}
+  _gameData: {fileID: 11400000, guid: fd9761f75c15015469fdb960563f9e30, type: 2}
   _pieceCatalog: {fileID: 11400000, guid: 9e8ef51f4bc3a1a42bda9f4a1cdcc78e, type: 2}
   _colors: {fileID: 11400000, guid: 47fddb40360f4d046b0a826fa5ed535c, type: 2}
