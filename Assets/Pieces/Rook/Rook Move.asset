@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc98b9c068a2214d82c520e201efd5c, type: 3}
   m_Name: Rook Move
   m_EditorClassIdentifier: 
+  Limit: {fileID: 11400000, guid: c726ee02c661ce74b9294547e3363f47, type: 2}

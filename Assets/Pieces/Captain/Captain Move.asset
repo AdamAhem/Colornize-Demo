@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d773f307b442800449ce541aaaab9b15, type: 3}
-  m_Name: Commander Move
+  m_Script: {fileID: 11500000, guid: 3d07804535eed26478435a355db9f372, type: 3}
+  m_Name: Captain Move
   m_EditorClassIdentifier: 
-  Limit: {fileID: 11400000, guid: c726ee02c661ce74b9294547e3363f47, type: 2}
+  Limit: {fileID: 11400000, guid: 4322cbc53f721084992f6aacd253ef52, type: 2}

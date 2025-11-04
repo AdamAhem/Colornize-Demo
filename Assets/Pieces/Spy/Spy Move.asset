@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d773f307b442800449ce541aaaab9b15, type: 3}
-  m_Name: Commander Move
+  m_Script: {fileID: 11500000, guid: 715e0f8eb48956845a857cb5ffa18af1, type: 3}
+  m_Name: Spy Move
   m_EditorClassIdentifier: 
   Limit: {fileID: 11400000, guid: c726ee02c661ce74b9294547e3363f47, type: 2}

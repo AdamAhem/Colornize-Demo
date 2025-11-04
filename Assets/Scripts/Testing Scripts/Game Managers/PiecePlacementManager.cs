@@ -8,6 +8,7 @@ namespace Game
 
         [Header("Components")]
         [SerializeField] private PlacementPiecesInterface[] _interfaces;
+        [SerializeField] private GameManager _gameManager;
 
         [Header("Scriptable Objects")]
         [SerializeField] private GameInstanceData _gameData;
@@ -110,16 +111,7 @@ namespace Game
             // increment number of pieces placed
             _piecesPlaced++;
 
-            // check if its the last piece.
-            bool finalPieceConfirmed = _piecesPlaced == _totalPiecesExpected;
-
             Debug.Log($"{_piecesPlaced} / {_totalPiecesExpected} pieces placed.");
-
-            if (finalPieceConfirmed)
-            {
-                ConfirmFinalPiecePlaced();
-                return;
-            }
 
             // update the cell status.
             CellStatus status = _gameData.GetCellStatusAtPosition(_positionOfNewlyPlacedPiece);
@@ -128,6 +120,9 @@ namespace Game
 
             status.SetPlayerID(_currentPlayerIndex);
             status.SetPieceID(pieceID);
+
+            // also set the piece position. (need to initialize it first)
+            _gameData.SetPlayerPiecePosition(_currentPlayerIndex, _currentSlotIndex, status.Cell.Position);
 
             // DISABLE THE SLOT BUTTON SO THE PLAYER CANNOT USE THAT PIECE ANYMORE.
             _interfaces[_currentPlayerIndex].DisableSlotButton(_currentSlotIndex);
@@ -141,12 +136,21 @@ namespace Game
             // enable the new interface
             EnablePlayerInterface(_currentPlayerIndex);
 
+            // check if its the last piece.
+            bool finalPieceConfirmed = _piecesPlaced == _totalPiecesExpected;
+            if (finalPieceConfirmed)
+            {
+                ConfirmFinalPiecePlaced();
+                return;
+            }
+
             _currentState = PlacementState.ChoosingPiece;
         }
 
         private void ConfirmFinalPiecePlaced()
         {
             Debug.Log("ITS TIME TO GAMING");
+            _gameManager.OnPressConfirmToPlay();
         }
 
         private void EnablePlayerInterface(int playerID)

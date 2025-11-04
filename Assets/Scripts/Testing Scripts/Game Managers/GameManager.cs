@@ -10,7 +10,7 @@ namespace Game
         private enum GamePhase { Selection, Placement, Gameplay }
 
         [Header("Starting phase  on playmode")]
-        [SerializeField] private GamePhase _startPhase;
+        [SerializeField] private GamePhase _currentPhase;
 
         [Header("Managers")]
         [SerializeField] private PlayerSelectionManager _playerSelectionManager;
@@ -19,6 +19,9 @@ namespace Game
         [SerializeField] private GameObject _placementMain;
         [SerializeField] private BoardBuilder _boardBuilder;
         [SerializeField] private GameplayManager _gameplayManager;
+        [SerializeField] private GameObject _cellsBoardObject;
+        [SerializeField] private GameObject _scoreboardMain;
+        [SerializeField] private GameObject _selectionMainObject;
 
         [Header("Scriptable Objects")]
         [SerializeField] private GameInstanceData _gameData;
@@ -29,13 +32,25 @@ namespace Game
         public async void OnPressPlay_UI_BUTTON()
         {
             // disable the player selection manager and initialize (for first time playing) + enable the GAMEPLAY manager (first phase - piece placement)
-            _playerSelectionManager.Disable();
-            _playerSelectionManager.FadeOut(_selectionPageFadeDuration);
+            DisableSelection();
 
             await AsyncHelpers.Wait(_selectionPageFadeDuration);
 
-            _placementManager.Initialize();
-            _placementManager.Enable();
+            _selectionMainObject.SetActive(false);
+
+            _currentPhase = GamePhase.Placement;
+
+            InitializePlacement();
+            EnablePlacement();
+        }
+
+        public void OnPressConfirmToPlay()
+        {
+            _currentPhase = GamePhase.Gameplay;
+            DisablePlacement();
+
+            InitializeGameplay();
+            EnableGameplay();
         }
 
         private void Awake()
@@ -43,7 +58,7 @@ namespace Game
             _selectionData.ResetData();
             _gameplayColors.List = _defaultColors.List;
 
-            switch (_startPhase)
+            switch (_currentPhase)
             {
                 case GamePhase.Selection: InitializeSelection(); break;
                 case GamePhase.Placement: InitializePlacement(); break;
@@ -53,7 +68,7 @@ namespace Game
 
         private void OnEnable()
         {
-            switch (_startPhase)
+            switch (_currentPhase)
             {
                 case GamePhase.Selection: EnableSelection(); break;
                 case GamePhase.Placement: EnablePlacement(); break;
@@ -63,7 +78,7 @@ namespace Game
 
         private void OnDisable()
         {
-            switch (_startPhase)
+            switch (_currentPhase)
             {
                 case GamePhase.Selection: DisableSelection(); break;
                 case GamePhase.Placement: DisablePlacement(); break;
@@ -75,7 +90,7 @@ namespace Game
         {
             _selectionData.ResetData();
 
-            switch (_startPhase)
+            switch (_currentPhase)
             {
                 case GamePhase.Selection: ResetSelection(); break;
                 case GamePhase.Placement: ResetPlacement(); break;
@@ -87,18 +102,24 @@ namespace Game
 
         private void InitializeSelection()
         {
+            _cellsBoardObject.SetActive(false);
+            _scoreboardMain.SetActive(false);
+
             _gameData.ResetData();
             _playerSelectionManager.Initialize();
         }
 
         private void EnableSelection()
         {
+            _selectionMainObject.SetActive(true);
+
             _playerSelectionManager.Enable();
         }
 
         private void DisableSelection()
         {
             _playerSelectionManager.Disable();
+            _playerSelectionManager.FadeOut(_selectionPageFadeDuration);
         }
 
         private void ResetSelection()
@@ -120,6 +141,9 @@ namespace Game
         {
             _placementManager.Enable();
             _boardBuilder.BuildBoard();
+
+            _placementMain.SetActive(true);
+            _cellsBoardObject.SetActive(true);
         }
 
         private void DisablePlacement()
@@ -140,13 +164,13 @@ namespace Game
         {
             _playerSelectionManager.FadeOut(0);
             _placementMain.SetActive(false);
-            _boardBuilder.BuildBoard();
             _gameplayManager.Initialize();
         }
 
         private void EnableGameplay()
         {
             _gameplayManager.Enable();
+            _scoreboardMain.SetActive(true);
         }
 
         private void DisableGameplay()

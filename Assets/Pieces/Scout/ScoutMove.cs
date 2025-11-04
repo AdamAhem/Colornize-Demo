@@ -3,19 +3,19 @@ using UnityEngine;
 
 namespace Game
 {
-    [CreateAssetMenu(fileName = "Bishop Move", menuName = "SO/Piece Moves/Bishop")]
-    public class BishopMove : PieceMove
+    [CreateAssetMenu(fileName = "Scout Move", menuName = "SO/Piece Moves/Scout")]
+    public class ScoutMove : PieceMove
     {
         private readonly int[][] Moves = new int[8][]
 {
+            new int[2] {0, 2 },
             new int[2] {1, 1 },
-            new int[2] {2, 2 },
+            new int[2] {2, 0 },
             new int[2] {1, -1 },
-            new int[2] {2, -2 },
+            new int[2] {0, -2 },
             new int[2] {-1, -1 },
-            new int[2] {-2, -2 },
-            new int[2] {-1, 1 },
-            new int[2] {-2, 2 }
+            new int[2] {-2, 0 },
+            new int[2] {-1, 1 }
 };
 
         public override List<Vector2> Get(int x, int y, Vector2 size)

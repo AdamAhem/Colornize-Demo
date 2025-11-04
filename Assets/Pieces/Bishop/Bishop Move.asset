@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4a1c7d55ed70449b38c8bfebcf0e65, type: 3}
   m_Name: Bishop Move
   m_EditorClassIdentifier: 
+  Limit: {fileID: 11400000, guid: c726ee02c661ce74b9294547e3363f47, type: 2}

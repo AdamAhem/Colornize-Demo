@@ -34,7 +34,7 @@ namespace Game
         {
             Debug.Log("GAMEPLAY MANAGER INITIALIZED");
 
-            _gameData.SetNumberOfPlayers(_premadePiecePlacement.Settings.Length);
+            //_gameData.SetNumberOfPlayers(_premadePiecePlacement.Settings.Length);
 
             _playerTurnIndex = 0;
             _movesLeft = _maxMoves;
