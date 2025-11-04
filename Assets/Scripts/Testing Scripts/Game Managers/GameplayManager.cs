@@ -5,6 +5,9 @@ namespace Game
 {
     public class GameplayManager : MonoBehaviour
     {
+        [Header("Components")]
+        [SerializeField] private PlayerScoreDisplayHandler[] _playerScores;
+
         [Header("Config")]
         [SerializeField][Min(1)] private int _maxMoves;
 
@@ -60,6 +63,8 @@ namespace Game
 
                         cell.SetHighlightIconAsPiece(piece.pieceID);
                         cell.SetCellColorAsPlayerColor(playerID);
+
+                        _gameData.SetPlayerPiecePosition(playerID, j, piece.row, piece.column);
                     }
                 }
 
@@ -76,11 +81,33 @@ namespace Game
                 }
 
             }
+
+            _playerScores[_playerTurnIndex].Enable();
+
+            for (int i = 1; i < _gameData.NumberOfPlayers; i++)
+            {
+                Vector2[] piecePositions = _gameData.PlayerPiecePositions[i];
+
+                for (int j = 0; j < piecePositions.Length; j++)
+                {
+                    CellStatus status = _gameData.GetCellStatusAtPosition(piecePositions[j]);
+                    status.Cell.SetInActiveHighlight();
+                }
+
+                _playerScores[i].Disable();
+            }
+
+            for (int i = _gameData.NumberOfPlayers; i < _playerScores.Length; i++)
+            {
+                _playerScores[i].Hide();
+            }
         }
 
         public void Enable()
         {
             Debug.Log("GAMEPLAY MANAGER ENABLED");
+
+            for (int i = 0; i < _playerScores.Length; i++) _playerScores[i].ResetScore();
 
             _cellClickedEvent.AddEvent(OnCellClicked);
         }
@@ -142,6 +169,15 @@ namespace Game
 
             if (pickedSamePieceAsBefore)
             {
+                // EDGE CASE - picked same piece WHILE MOVES LEFT IS NOT AT MAX MOVES.
+                // this means that the previous move was made by the same player and they must CONSUME ALL MOVES ON THIS SPECIFIC PIECE (commit)
+
+                if (_movesLeft < _maxMoves)
+                {
+                    Debug.Log("FINISH YOUR MOVES.");
+                    return;
+                }
+
                 Debug.Log("picked same piece as before - UNHIGHLIGHT POSSIBLE MOVES AND ALLOW THE CURRENT PLAYER TO SELECT ANOTHER PIECE.");
 
                 status.Cell.UnhighlightPossibleMoves(status.PlayerID, status.PieceID);
@@ -235,6 +271,18 @@ namespace Game
             currentCellStatus.SetPieceID(Defaults.PIECE_ID);
             targetCellStatus.SetPieceID(pieceIDAtCurrentCell);
 
+            // update the player's piece position in the game manager.
+            Vector2[] playerPiecePositions = _gameData.PlayerPiecePositions[_playerTurnIndex];
+
+            for (int i = 0; i < playerPiecePositions.Length; i++)
+            {
+                if (playerPiecePositions[i] == currentCell.Position)
+                {
+                    playerPiecePositions[i] = targetCell.Position;
+                    break;
+                }
+            }
+
             // update board visuals
             currentCell.ClearHighlight();
             targetCell.SetHighlightIconAsPiece(pieceID);
@@ -245,18 +293,57 @@ namespace Game
             CellStatus status = _gameData.GetCellStatusAtPosition(cellPosition);
             BoardCell cell = status.Cell;
 
+            int idBeforeColoring = status.PlayerID;
+
             status.SetPlayerID(playerID);
             cell.SetCellColorAsPlayerColor(playerID);
+
+            // INCREASE THE SCORE OF THE CURRENT PLAYER BY 1 EVERY TIME THEY COLOR AN EMPTY CELL WITH THEIR COLOR.
+            if (idBeforeColoring == Defaults.PLAYER_ID) IncreaseScore(_playerTurnIndex);
         }
 
         private void MoveToNextPlayer()
         {
+            // IMPT: WHERE TO FIND THEIR PIECES ON THE BOARD?
+
+
+            // VISUAL UPDATES FOR CURRENT PLAYER:
+
+            // 1) set all their pieces' alpha to be less than 1 (0.5)
+            Vector2[] currentPlayerPositions = _gameData.PlayerPiecePositions[_playerTurnIndex];
+            for (int i = 0; i < currentPlayerPositions.Length; i++)
+            {
+                _gameData.GetCellStatusAtPosition(currentPlayerPositions[i]).Cell.SetInActiveHighlight();
+            }
+
+
+            // 2) unhighlight their score display handler
+            _playerScores[_playerTurnIndex].Disable();
+
+
             _playerTurnIndex = (_playerTurnIndex + 1) % _gameData.NumberOfPlayers;
             _movesLeft = _maxMoves;
 
             _pieceSelected = false;
             _identifiedPiecePosition = default;
             _currentPossibleMoves = null;
+
+            // VISUAL UPDATES FOR NEXT PLAYER:
+
+            // 1) set all their pieces' alpha to be 1
+            Vector2[] newPlayerPositions = _gameData.PlayerPiecePositions[_playerTurnIndex];
+            for (int i = 0; i < newPlayerPositions.Length; i++)
+            {
+                _gameData.GetCellStatusAtPosition(newPlayerPositions[i]).Cell.SetActiveHighlight();
+            }
+
+            // 2) highlight their score display handler
+            _playerScores[_playerTurnIndex].Enable();
+        }
+
+        private void IncreaseScore(int playerID)
+        {
+            _playerScores[playerID].AddPoint();
         }
     }
 }

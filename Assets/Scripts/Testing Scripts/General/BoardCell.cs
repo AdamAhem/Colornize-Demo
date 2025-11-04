@@ -30,6 +30,8 @@ namespace Game
 
         private bool _active = true;
 
+        public Vector2 Position => new(_row, _column);
+
         public void SetGameData(GameInstanceData gameData) => _gameData = gameData;
 
         public void SetRowAndColumn(int row, int column)

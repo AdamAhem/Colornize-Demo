@@ -21,6 +21,10 @@ namespace Game
         [SerializeField][ReadOnly] private int _lastClickedColumn;
         [SerializeField][ReadOnly] private Vector2 _boardDimensions;
 
+        private List<Vector2[]> _playerPiecePositions;
+
+        //              row, column (y, x)
+
         private CellStatus[][] _boardStatus;
         private List<Vector2> _movesList;
 
@@ -34,6 +38,8 @@ namespace Game
 
         public Vector2 BoardDimensions => _boardDimensions;
 
+        public List<Vector2[]> PlayerPiecePositions => _playerPiecePositions;
+
         public void ResetData()
         {
             _numberOfPlayers = 0;
@@ -44,6 +50,12 @@ namespace Game
 
             _boardStatus = null;
             _movesList = new List<Vector2>(Defaults.MAX_POSSIBLE_MOVES);
+            _playerPiecePositions = null;
+        }
+
+        public void SetPlayerPiecePosition(int playerID, int pieceID, int row, int column)
+        {
+            _playerPiecePositions[playerID][pieceID] = new Vector2(row, column);
         }
 
         public void GenerateNewBoard(int rows, int columns)
@@ -92,6 +104,12 @@ namespace Game
         public void SetNumberOfPlayers(int number)
         {
             _numberOfPlayers = number;
+            _playerPiecePositions = new List<Vector2[]>(_numberOfPlayers);
+
+            for (int i = 0; i < _numberOfPlayers; i++)
+            {
+                _playerPiecePositions.Add(new Vector2[_piecesPerPlayer]);
+            }
 
             int configCount = _playerConfig.Count;
 
