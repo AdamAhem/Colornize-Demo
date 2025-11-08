@@ -7,6 +7,8 @@ namespace Game
     {
         [SerializeField] private PieceInfo[] _info;
 
+        public int NumberOfPieces => _info.Length;
+
         public PieceInfo Get(int ID) => _info[ID];
     }
 }

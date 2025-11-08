@@ -91,6 +91,12 @@ namespace Game
             _highlightRenderer.sprite = null;
         }
 
+        public void ClearCell()
+        {
+            ClearHighlight();
+            ResetCellColor();
+        }
+
         public void SetHighlightIconAsPiece(int pieceID)
         {
             _highlightRenderer.sprite = _pieceCatalog.Get(pieceID).Icon;

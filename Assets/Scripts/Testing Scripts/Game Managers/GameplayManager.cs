@@ -8,6 +8,9 @@ namespace Game
         [Header("Components")]
         [SerializeField] private PlayerScoreDisplayHandler[] _playerScores;
 
+        [Header("Game Objects")]
+        [SerializeField] private GameObject _mainDisplayObject;
+
         [Header("Config")]
         [SerializeField][Min(1)] private int _maxMoves;
 
@@ -117,6 +120,17 @@ namespace Game
             Debug.Log("GAMEPLAY MANAGER DISABLED");
 
             _cellClickedEvent.RemoveEvent(OnCellClicked);
+        }
+
+        public void Show()
+        {
+            _mainDisplayObject.SetActive(true);
+        }
+
+        public void Hide()
+        {
+            // hide player number buttons
+            _mainDisplayObject.SetActive(false);
         }
 
         private void OnCellClicked()

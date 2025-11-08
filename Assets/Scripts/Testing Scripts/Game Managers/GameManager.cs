@@ -12,51 +12,40 @@ namespace Game
         [Header("Starting phase  on playmode")]
         [SerializeField] private GamePhase _currentPhase;
 
-        [Header("Managers")]
-        [SerializeField] private PlayerSelectionManager _playerSelectionManager;
-        [SerializeField] private float _selectionPageFadeDuration;
+        [Header("Main Managers")]
+        [SerializeField] private PlayerSelectionManager _selectionManager;
         [SerializeField] private PiecePlacementManager _placementManager;
-        [SerializeField] private GameObject _placementMain;
-        [SerializeField] private BoardBuilder _boardBuilder;
         [SerializeField] private GameplayManager _gameplayManager;
-        [SerializeField] private GameObject _cellsBoardObject;
-        [SerializeField] private GameObject _scoreboardMain;
-        [SerializeField] private GameObject _selectionMainObject;
+        [SerializeField] private BoardManager _boardManager;
 
-        [Header("Scriptable Objects")]
+        [Header("Data")]
         [SerializeField] private GameInstanceData _gameData;
         [SerializeField] private SelectionStateData _selectionData;
         [SerializeField] private Colors _defaultColors;
         [SerializeField] private Colors _gameplayColors;
 
-        public async void OnPressPlay_UI_BUTTON()
-        {
-            // disable the player selection manager and initialize (for first time playing) + enable the GAMEPLAY manager (first phase - piece placement)
-            DisableSelection();
+        [Header("Events")]
+        [SerializeField] private GameEvent _selectionToPlacementTransitionEvent;
+        [SerializeField] private GameEvent _placementToSelectionTransitionEvent;
+        [SerializeField] private GameEvent _placementToGameplayTransitionEvent;
+        [SerializeField] private GameEvent _gameplayToPlacementTransitionEvent;
 
-            await AsyncHelpers.Wait(_selectionPageFadeDuration);
+        //public void OnPressConfirmToPlay()
+        //{
+        //    _currentPhase = GamePhase.Gameplay;
 
-            _selectionMainObject.SetActive(false);
+        //    DisablePlacement();
 
-            _currentPhase = GamePhase.Placement;
-
-            InitializePlacement();
-            EnablePlacement();
-        }
-
-        public void OnPressConfirmToPlay()
-        {
-            _currentPhase = GamePhase.Gameplay;
-            DisablePlacement();
-
-            InitializeGameplay();
-            EnableGameplay();
-        }
+        //    InitializeGameplay();
+        //    EnableGameplay();
+        //}
 
         private void Awake()
         {
-            _selectionData.ResetData();
-            _gameplayColors.List = _defaultColors.List;
+            HideEverything();
+            ResetToDefaults();
+
+            Debug.Log($"<color=yellow>EVERYTHING HAS BEEN RESET.</color>");
 
             switch (_currentPhase)
             {
@@ -74,6 +63,8 @@ namespace Game
                 case GamePhase.Placement: EnablePlacement(); break;
                 case GamePhase.Gameplay: EnableGameplay(); break;
             }
+
+            ObserveTransitionEvents();
         }
 
         private void OnDisable()
@@ -84,6 +75,8 @@ namespace Game
                 case GamePhase.Placement: DisablePlacement(); break;
                 case GamePhase.Gameplay: DisableGameplay(); break;
             }
+
+            IgnoreTransitionEvents();
         }
 
         private void OnDestroy()
@@ -98,28 +91,45 @@ namespace Game
             }
         }
 
+        private void HideEverything()
+        {
+            // hide selection manager
+            _selectionManager.Hide();
+
+            // hide placement manager
+            _placementManager.Hide();
+
+            // hide gameplay manager
+            _gameplayManager.Hide();
+
+            // hide board manager
+            _boardManager.Hide();
+        }
+
+        private void ResetToDefaults()
+        {
+            _gameData.ResetData();
+            _selectionData.ResetData();
+            _gameplayColors.List = _defaultColors.List;
+        }
+
         #region selection methods
 
         private void InitializeSelection()
         {
-            _cellsBoardObject.SetActive(false);
-            _scoreboardMain.SetActive(false);
-
-            _gameData.ResetData();
-            _playerSelectionManager.Initialize();
+            _selectionManager.Initialize();
         }
 
         private void EnableSelection()
         {
-            _selectionMainObject.SetActive(true);
-
-            _playerSelectionManager.Enable();
+            _selectionManager.Enable();
+            _selectionManager.Show();
         }
 
         private void DisableSelection()
         {
-            _playerSelectionManager.Disable();
-            _playerSelectionManager.FadeOut(_selectionPageFadeDuration);
+            _selectionManager.Hide();
+            _selectionManager.Disable();
         }
 
         private void ResetSelection()
@@ -133,21 +143,23 @@ namespace Game
 
         private void InitializePlacement()
         {
-            _playerSelectionManager.FadeOut(0);
+            _boardManager.InitializeBoard();
             _placementManager.Initialize();
         }
 
         private void EnablePlacement()
         {
-            _placementManager.Enable();
-            _boardBuilder.BuildBoard();
+            _boardManager.Show();
 
-            _placementMain.SetActive(true);
-            _cellsBoardObject.SetActive(true);
+            _placementManager.Enable();
+            _placementManager.Show();
         }
 
         private void DisablePlacement()
         {
+            _boardManager.Hide();
+
+            _placementManager.Hide();
             _placementManager.Disable();
         }
 
@@ -162,15 +174,15 @@ namespace Game
 
         private void InitializeGameplay()
         {
-            _playerSelectionManager.FadeOut(0);
-            _placementMain.SetActive(false);
+            _selectionManager.gameObject.SetActive(false);
+            //_placementMain.SetActive(false);
             _gameplayManager.Initialize();
         }
 
         private void EnableGameplay()
         {
             _gameplayManager.Enable();
-            _scoreboardMain.SetActive(true);
+            //_scoreboardMain.SetActive(true);
         }
 
         private void DisableGameplay()
@@ -184,5 +196,53 @@ namespace Game
         }
 
         #endregion
+
+
+        #region transition methods
+
+        private void ObserveTransitionEvents()
+        {
+            _selectionToPlacementTransitionEvent.AddEvent(OnTransitionFromSelectionToPlacement);
+            _placementToSelectionTransitionEvent.AddEvent(OnTransitionFromPlacementToSelection);
+            _placementToGameplayTransitionEvent.AddEvent(OnTransitionFromPlacementToGameplay);
+            _gameplayToPlacementTransitionEvent.AddEvent(OnTransitionFromGameplayToPlacement);
+        }
+
+        private void IgnoreTransitionEvents()
+        {
+            _selectionToPlacementTransitionEvent.RemoveEvent(OnTransitionFromSelectionToPlacement);
+            _placementToSelectionTransitionEvent.RemoveEvent(OnTransitionFromPlacementToSelection);
+            _placementToGameplayTransitionEvent.RemoveEvent(OnTransitionFromPlacementToGameplay);
+            _gameplayToPlacementTransitionEvent.RemoveEvent(OnTransitionFromGameplayToPlacement);
+        }
+
+        private void OnTransitionFromSelectionToPlacement()
+        {
+            Debug.Log($"<color=cyan>TRANSITIONING FROM SELECTION TO PLACEMENT.</color>");
+            _currentPhase = GamePhase.Placement;
+
+            DisableSelection();
+
+            InitializePlacement();
+            EnablePlacement();
+        }
+
+        private void OnTransitionFromPlacementToSelection()
+        {
+            Debug.Log($"pla -> sel");
+        }
+
+        private void OnTransitionFromPlacementToGameplay()
+        {
+            Debug.Log("pla -> gam");
+        }
+
+        private void OnTransitionFromGameplayToPlacement()
+        {
+            Debug.Log("gam -> pla");
+        }
+
+        #endregion
+
     }
 }

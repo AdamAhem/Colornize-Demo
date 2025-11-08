@@ -2,8 +2,12 @@ using UnityEngine;
 
 namespace Game
 {
-    public class BoardBuilder : MonoBehaviour
+    public class BoardManager : MonoBehaviour
     {
+        [Header("INITIALIZATION STATUS")]
+        [SerializeField][ReadOnly] private bool _initialized = false;
+
+        [Header("Building Config")]
         [SerializeField] private BoardCell _boardCellObject;
         [SerializeField] private GameObject _boardParent;
         [SerializeField][Min(3)] private int _rows;
@@ -12,10 +16,23 @@ namespace Game
         [SerializeField] private Transform _corner2;
         [SerializeField] private float _cellScale;
 
+        [Header("Game Objects")]
+        [SerializeField] private GameObject _mainDisplayObject;
+
+        [Header("Data")]
         [SerializeField] private GameInstanceData _instanceData;
 
-        public void BuildBoard()
+        public void InitializeBoard()
         {
+            if (_initialized)
+            {
+                Debug.Log($"<color=magenta>Board Manager already initialized</color>");
+                return;
+            }
+
+            Debug.Log("<color=lime>Board Manager Initialized (new board built)</color>");
+            _initialized = true;
+
             _instanceData.GenerateNewBoard(_rows, _columns);
 
             Vector2 corner1Pos = _corner1.position;
@@ -41,6 +58,19 @@ namespace Game
                 newCell.SetGameData(_instanceData);
                 _instanceData.InitializeBoardPosition(currentRow, currentCol, newCell);
             }
+        }
+
+        public void Show()
+        {
+            Debug.Log("<color=lime>Showing board</color>");
+            _mainDisplayObject.SetActive(true);
+        }
+
+        public void Hide()
+        {
+            Debug.Log("<color=lime>Hiding board</color>");
+            if (_mainDisplayObject == null) return; // this object can sometimes get destroyed when exiting playmode.
+            _mainDisplayObject.SetActive(false);
         }
     }
 }

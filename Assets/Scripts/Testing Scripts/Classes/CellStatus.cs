@@ -6,7 +6,10 @@ namespace Game
     [Serializable]
     public class CellStatus
     {
+        [Header("Fixed on initialization")]
         [SerializeField][ReadOnly] private BoardCell _cell;
+
+        [Header("Variables")]
         [SerializeField][ReadOnly] private int _playerID;
         [SerializeField][ReadOnly] private int _pieceID;
 
@@ -23,6 +26,12 @@ namespace Game
 
         public void SetPlayerID(int playerID) => _playerID = playerID;
         public void SetPieceID(int pieceID) => _pieceID = pieceID;
+
+        public void ResetIDs()
+        {
+            _playerID = Defaults.PLAYER_ID;
+            _pieceID = Defaults.PIECE_ID;
+        }
 
         public Vector2[] GetAndHighlightPossibleMoves()
         {

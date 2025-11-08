@@ -22,11 +22,7 @@ namespace Game
         [SerializeField][ReadOnly] private Vector2 _boardDimensions;
 
         private List<Vector2[]> _playerPiecePositions;
-
-        //              row, column (y, x)
-
         private CellStatus[][] _boardStatus;
-        private List<Vector2> _movesList;
 
         public void SetLastClickedCellInfo(int row, int column)
         {
@@ -49,14 +45,12 @@ namespace Game
             _lastClickedColumn = 0;
 
             _boardStatus = null;
-            _movesList = new List<Vector2>(Defaults.MAX_POSSIBLE_MOVES);
             _playerPiecePositions = null;
         }
 
         public void SetPlayerPiecePosition(int playerID, int pieceID, int row, int column)
         {
             SetPlayerPiecePosition(playerID, pieceID, new Vector2(row, column));
-            //_playerPiecePositions[playerID][pieceID] = new Vector2(row, column);
         }
 
         public void SetPlayerPiecePosition(int playerID, int pieceID, Vector2 position)
@@ -124,7 +118,7 @@ namespace Game
                 for (int i = configCount; i > _numberOfPlayers; i--)
                 {
                     int j = i - 1;
-                    Debug.Log($"removing: {j}");
+                    //Debug.Log($"removing: {j}");
                     _playerConfig.RemoveAt(j);
                 }
             }
@@ -133,7 +127,7 @@ namespace Game
                 for (int i = 0; i < _numberOfPlayers - configCount; i++)
                 {
                     int j = i + configCount;
-                    Debug.Log($"adding: {j}");
+                    //Debug.Log($"adding: {j}");
                     _playerConfig.Add(new PreGamePlayerConfig(j, _piecesPerPlayer));
                 }
             }

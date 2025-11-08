@@ -8,7 +8,6 @@ namespace Game
         [Header("Player count")]
         [SerializeField] private TMP_Text _numberText;
         [SerializeField] private int _defaultPlayerNumber;
-        [SerializeField] private int _maxPlayers;
         [SerializeField] private int _minPlayers;
 
         [Header("Piece selection")]
@@ -19,7 +18,9 @@ namespace Game
 
         public void Initialize()
         {
-            _gameData.GenerateNewPlayerConfigs(_maxPlayers);
+            Debug.Log("<color=lime>Player Counter Initialized</color>");
+
+            _gameData.GenerateNewPlayerConfigs(Defaults.MAX_PLAYERS);
 
             UpdatePlayerCountDataAndText(_defaultPlayerNumber);
             UpdatePlayerDisplayPanel(_defaultPlayerNumber);
@@ -27,14 +28,14 @@ namespace Game
 
         public void IncreasePlayerNumber_UI_BUTTON()
         {
-            int newAmount = Mathf.Clamp(_gameData.NumberOfPlayers + 1, _minPlayers, _maxPlayers);
+            int newAmount = Mathf.Clamp(_gameData.NumberOfPlayers + 1, _minPlayers, Defaults.MAX_PLAYERS);
             UpdatePlayerCountDataAndText(newAmount);
             UpdatePlayerDisplayPanel(newAmount);
         }
 
         public void DecreasePlayerNumber_UI_BUTTON()
         {
-            int newAmount = Mathf.Clamp(_gameData.NumberOfPlayers - 1, _minPlayers, _maxPlayers);
+            int newAmount = Mathf.Clamp(_gameData.NumberOfPlayers - 1, _minPlayers, Defaults.MAX_PLAYERS);
             UpdatePlayerCountDataAndText(newAmount);
             UpdatePlayerDisplayPanel(newAmount);
         }
@@ -50,7 +51,12 @@ namespace Game
             for (int i = 0; i < _pieceSelectionHandlers.Length; i++)
             {
                 if (i < playerCount) _pieceSelectionHandlers[i].SetActive();
-                else _pieceSelectionHandlers[i].SetInactive();
+                else
+                {
+                    var handler = _pieceSelectionHandlers[i];
+                    handler.SetInactive();
+                    handler.ClearChosenPieces();
+                }
             }
         }
     }

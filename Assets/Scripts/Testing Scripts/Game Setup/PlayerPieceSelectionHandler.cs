@@ -11,7 +11,7 @@ namespace Game
         [Header("Slots")]
         [SerializeField] private Image[] _buttonBackgroundImages;
         [SerializeField] private Image[] _selectedPieceImages;
-        [SerializeField] private GameObject[] _plusButtonObjects;
+        [SerializeField] private Sprite _defaultSelectedPieceSprite;
 
         [Header("Player panel visuals")]
         [SerializeField] private Image _playerPanelImage;
@@ -50,19 +50,6 @@ namespace Game
             Vector2 textPos = _playerNumberText.rectTransform.anchoredPosition;
 
             _playerNumberText.rectTransform.anchoredPosition = new Vector2(textPos.x, _activeTextHeight);
-
-            // additionally, need to reset all of the slots to display the plus button, set the image to none and the color to be zero.
-            for (int i = 0; i < _selectedPieceImages.Length; i++)
-            {
-                var pieceImage = _selectedPieceImages[i];
-                pieceImage.color = Color.clear;
-                pieceImage.sprite = null;
-            }
-
-            for (int i = 0; i < _plusButtonObjects.Length; i++)
-            {
-                _plusButtonObjects[i].SetActive(true);
-            }
         }
 
         public void SetInactive()
@@ -81,6 +68,14 @@ namespace Game
             _playerNumberText.rectTransform.anchoredPosition = new Vector2(textPos.x, _inactiveTextHeight);
         }
 
+        public void ClearChosenPieces()
+        {
+            for (int i = 0; i < _selectedPieceImages.Length; i++)
+            {
+                _selectedPieceImages[i].sprite = _defaultSelectedPieceSprite;
+            }
+        }
+
         public void OnPressAddPiece_UI_BUTTON(int slotID)
         {
             if (_selectionStateData.PlayerAddingPiece) return;
@@ -94,7 +89,6 @@ namespace Game
         {
             _buttonBackgroundImages[slotID].color = _defaultButtonColor;
 
-            _plusButtonObjects[slotID].SetActive(false);
             var pieceImage = _selectedPieceImages[slotID];
 
             // change the plus button image to be that of what was chosen (dictionary)
