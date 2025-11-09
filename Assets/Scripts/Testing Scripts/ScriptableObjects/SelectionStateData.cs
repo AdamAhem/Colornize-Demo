@@ -26,17 +26,18 @@ namespace Game
         private int _previousSlotID;
 
         [Header("Pre Game Config. <color=red>DO NOT MODIFY.</color>")]
-        [SerializeField] private List<PlayerSelectionData> _playerConfig;
+        [SerializeField] private List<PlayerSelectionData> _selectionData;
 
         public int RecentPlayerID => _recentlySelectedPlayerID;
         public int RecentSlotID => _recentlySelectedSlotID;
         public int RecentPieceID => _recentlySelectedPieceID;
         public int PreviousPlayerID => _previousPlayerID;
         public int PreviousSlotID => _previousSlotID;
-        public int PlayerCount => _playerConfig.Count;
+        public int PlayerCount => _selectionData.Count;
         public int PiecesPerPlayer => _piecesPerPlayer;
+        public List<PlayerSelectionData> SelectionData => _selectionData;
 
-        public bool PlayerConfigAvailable => _playerConfig != null;
+        public bool PlayerConfigAvailable => _selectionData != null;
         public bool PlayerCountMaximized => PlayerCount == Defaults.MAX_PLAYERS;
 
         public bool PlayerCountMinimized => PlayerCount == Defaults.MIN_PLAYERS;
@@ -46,21 +47,21 @@ namespace Game
         public void ResetAllDataToDefaults()
         {
             ResetCurrentSelections();
-            _playerConfig = null;
+            _selectionData = null;
         }
 
         public void InitializePlayerConfigs()
         {
-            _playerConfig = new List<PlayerSelectionData>(Defaults.MAX_PLAYERS);
+            _selectionData = new List<PlayerSelectionData>(Defaults.MAX_PLAYERS);
             for (int i = 0; i < _defaultNumberOfPlayers; i++)
             {
-                _playerConfig.Add(new PlayerSelectionData(i, _piecesPerPlayer));
+                _selectionData.Add(new PlayerSelectionData(i, _piecesPerPlayer));
             }
         }
 
         public void UpdatePlayerConfig(int playerID, int slotID, int pieceID)
         {
-            var config = _playerConfig[playerID];
+            var config = _selectionData[playerID];
             config.UpdateSlotWithPiece(slotID, pieceID);
         }
 
@@ -73,13 +74,13 @@ namespace Game
         public void IncreasePlayerCountBy1()
         {
             if (PlayerCountMaximized) return;
-            _playerConfig.Add(new PlayerSelectionData(_playerConfig.Count, _piecesPerPlayer));
+            _selectionData.Add(new PlayerSelectionData(_selectionData.Count, _piecesPerPlayer));
         }
 
         public void DecreasePlayerCountBy1()
         {
             if (PlayerCountMinimized) return;
-            _playerConfig.RemoveAt(_playerConfig.Count - 1);
+            _selectionData.RemoveAt(_selectionData.Count - 1);
         }
 
         public void SetPlayerAndSlotID(int playerID, int slotID)
@@ -111,12 +112,12 @@ namespace Game
 
         public void ResetPlayerData()
         {
-            for (int i = 0; i < _playerConfig.Count; i++)
+            for (int i = 0; i < _selectionData.Count; i++)
             {
-                _playerConfig[i].ResetPieces();
+                _selectionData[i].ResetPieces();
             }
         }
 
-        public bool IsEveryPlayerReady() => _playerConfig.All(x => x.IsReady());
+        public bool IsEveryPlayerReady() => _selectionData.All(x => x.IsReady());
     }
 }

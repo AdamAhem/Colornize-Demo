@@ -12,6 +12,8 @@ namespace Game
 
         private readonly int _pieceCount;
 
+
+
         public PlayerSelectionData(int playerID, int pieceCount)
         {
             PlayerID = playerID;

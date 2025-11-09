@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game
@@ -8,7 +9,6 @@ namespace Game
         private enum PlacementState { Initialized, ChoosingPiece, ChoosingCell, AwaitingConfirm, Ready }
 
         [Header("Data")]
-        [SerializeField] private GameInstanceData _gameData;
         [SerializeField] private PieceCatalog _catalog;
 
         [Header("Visualisation. <color=red>DO NOT MODIFY.</color>")]
@@ -17,37 +17,17 @@ namespace Game
         [SerializeField][ReadOnly] private int _currentSlotIndex;
         [SerializeField][ReadOnly] private PlacementState _currentState;
 
-        public int PlayerId => _currentPlayerIndex;
-
-        public int SlotID => _currentSlotIndex;
-
-        public void GenerateNewPlacementData()
+        public void InitializePlacementData(SelectionStateData selectionData)
         {
-            _placementDataStatus = new PlacementData[_gameData.NumberOfPlayers][];
+            var selectionDataList = selectionData.SelectionData;
 
-            for (int i = 0; i < _placementDataStatus.Length; i++)
+            for (int playerID = 0; playerID < selectionDataList.Count; playerID++)
             {
-                _placementDataStatus[i] = new PlacementData[_gameData.PiecesPerPlayer];
+                for (int slotID = 0; slotID < selectionDataList[playerID].PieceIDs.Length; slotID++)
+                {
+                    Debug.Log(selectionDataList[playerID].PieceIDs[slotID]);
+                }
             }
-
-            _currentState = PlacementState.Initialized;
         }
-
-        public void BeginPlacement()
-        {
-            // need to check if current state = initialized or ready.
-
-
-            _currentPlayerIndex = 0;
-            _currentSlotIndex = 0;
-            _currentState = PlacementState.ChoosingPiece;
-        }
-
-        //public PlacementData Get(int playerID)
-        //{
-
-        //}
-
-
     }
 }

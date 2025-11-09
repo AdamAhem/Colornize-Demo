@@ -5252,8 +5252,8 @@ MonoBehaviour:
   - {fileID: 1819156078}
   _gameManager: {fileID: 1508616268}
   _mainDisplayObject: {fileID: 1813533023}
-  _gameData: {fileID: 11400000, guid: 7d73a0b0b27589346bb7d94ac73d02a1, type: 2}
-  _placementState: {fileID: 11400000, guid: 579f59ec1964785499bc23924bb866ac, type: 2}
+  _selectionStateData: {fileID: 11400000, guid: 747b9ad4ab00c71429d6bf820f380b8c, type: 2}
+  _placementStateState: {fileID: 11400000, guid: 579f59ec1964785499bc23924bb866ac, type: 2}
   _clickCellEvent: {fileID: 11400000, guid: 547cd002ea7e8f942aa6cdd6355e9a89, type: 2}
   _placementToSelectionTransitionEvent: {fileID: 11400000, guid: 45dea51b3eb11a247b6d85977858b389, type: 2}
   _placementToGameplayTransitionEvent: {fileID: 11400000, guid: 935b3ef774232774089e8687b88b9b06, type: 2}
@@ -7710,7 +7710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1517052821
 Transform:
   m_ObjectHideFlags: 0
