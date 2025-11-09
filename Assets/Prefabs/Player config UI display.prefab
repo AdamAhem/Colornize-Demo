@@ -1289,3 +1289,5 @@ MonoBehaviour:
   _defaultButtonColor: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
   _colors: {fileID: 11400000, guid: 47fddb40360f4d046b0a826fa5ed535c, type: 2}
   _selectionStateData: {fileID: 11400000, guid: 747b9ad4ab00c71429d6bf820f380b8c, type: 2}
+  _catalog: {fileID: 11400000, guid: 9e8ef51f4bc3a1a42bda9f4a1cdcc78e, type: 2}
+  _playerAddPieceEvent: {fileID: 11400000, guid: cf792eb24878c0942a1473754f060041, type: 2}

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Game
 {
@@ -8,15 +7,16 @@ namespace Game
         [Header("ID config")]
         [SerializeField] private int _pieceID;
 
-        [Header("Sprite")]
-        [SerializeField] private Image _pieceImage;
-
         [Header("Data")]
         [SerializeField] private SelectionStateData _selectionStateData;
 
+        [Header("Events")]
+        [SerializeField] private GameEvent _choosePieceEvent;
+
         public void OnPressChoosePiece_UI_BUTTON()
         {
-            _selectionStateData.ChoosePieceForSelectedPlayer(_pieceID, _pieceImage.sprite);
+            _selectionStateData.SetPieceID(_pieceID);
+            _choosePieceEvent.Raise();
         }
     }
 }

@@ -81,7 +81,7 @@ namespace Game
 
         private void OnDestroy()
         {
-            _selectionData.ResetData();
+            _selectionData.ResetAllDataToDefaults();
 
             switch (_currentPhase)
             {
@@ -109,7 +109,7 @@ namespace Game
         private void ResetToDefaults()
         {
             _gameData.ResetData();
-            _selectionData.ResetData();
+            _selectionData.ResetAllDataToDefaults();
             _gameplayColors.List = _defaultColors.List;
         }
 
@@ -229,7 +229,14 @@ namespace Game
 
         private void OnTransitionFromPlacementToSelection()
         {
-            Debug.Log($"pla -> sel");
+            Debug.Log($"<color=cyan>TRANSITIONING FROM PLACEMENT TO SELECTION.</color>");
+
+            _currentPhase = GamePhase.Selection;
+
+            DisablePlacement();
+
+            //InitializeSelection();
+            EnableSelection();
         }
 
         private void OnTransitionFromPlacementToGameplay()

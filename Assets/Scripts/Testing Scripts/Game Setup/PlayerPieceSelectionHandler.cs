@@ -13,7 +13,7 @@ namespace Game
         [SerializeField] private Image[] _selectedPieceImages;
         [SerializeField] private Sprite _defaultSelectedPieceSprite;
 
-        [Header("Player panel visuals")]
+        [Header("Visual config")]
         [SerializeField] private Image _playerPanelImage;
         [SerializeField] private Image _colorImage;
 
@@ -32,68 +32,52 @@ namespace Game
         [SerializeField] private Color _defaultButtonColor;
         [SerializeField] private Colors _colors;
 
-        [Header("Selection State")]
+        [Header("Data")]
         [SerializeField] private SelectionStateData _selectionStateData;
+        [SerializeField] private PieceCatalog _catalog;
 
-        public void SetActive()
+        [Header("Events")]
+        [SerializeField] private GameEvent _playerAddPieceEvent;
+
+        public void OnPressAddPiece_UI_BUTTON(int slotID)
         {
-            // display 3 piece icons and color selector and set player name position to top
-            for (int i = 0; i < _objectsShownWhileActive.Length; i++)
-            {
-                _objectsShownWhileActive[i].SetActive(true);
-            }
-
-            _playerPanelImage.color = _activePanelImageColor;
-            _playerNumberText.color = _activeTextColor;
-            _colorImage.color = _colors.List[_playerID];
-
-            Vector2 textPos = _playerNumberText.rectTransform.anchoredPosition;
-
-            _playerNumberText.rectTransform.anchoredPosition = new Vector2(textPos.x, _activeTextHeight);
+            _selectionStateData.SetPlayerAndSlotID(_playerID, slotID);
+            _playerAddPieceEvent.Raise();
         }
 
-        public void SetInactive()
+        public void Show()
         {
-            // hide 3 piece icons and color selector and set player name position to center
-            for (int i = 0; i < _objectsShownWhileActive.Length; i++)
-            {
-                _objectsShownWhileActive[i].SetActive(false);
-            }
-
-            _playerPanelImage.color = _inactivePanelImageColor;
-            _playerNumberText.color = _inactiveTextColor;
-
-            Vector2 textPos = _playerNumberText.rectTransform.anchoredPosition;
-
-            _playerNumberText.rectTransform.anchoredPosition = new Vector2(textPos.x, _inactiveTextHeight);
+            gameObject.SetActive(true);
         }
 
-        public void ClearChosenPieces()
+        public void Hide()
         {
-            for (int i = 0; i < _selectedPieceImages.Length; i++)
+            gameObject.SetActive(false);
+        }
+
+        public void ClearSelectedPieces()
+        {
+            // need to loop through all images and buttons, set the color to default and icon to default.
+            for (int i = 0; i < _buttonBackgroundImages.Length; i++)
             {
+                _buttonBackgroundImages[i].color = _defaultButtonColor;
                 _selectedPieceImages[i].sprite = _defaultSelectedPieceSprite;
             }
         }
 
-        public void OnPressAddPiece_UI_BUTTON(int slotID)
+        public void SetActiveColor(int slotID)
         {
-            if (_selectionStateData.PlayerAddingPiece) return;
-
             _buttonBackgroundImages[slotID].color = _colors.List[_playerID];
-
-            _selectionStateData.SetPlayerAndPieceSelected(_playerID, slotID);
         }
 
-        public void OnPieceChosen(int slotID, Sprite pieceSprite)
+        public void SetInactiveColor(int slotID)
         {
             _buttonBackgroundImages[slotID].color = _defaultButtonColor;
+        }
 
-            var pieceImage = _selectedPieceImages[slotID];
-
-            // change the plus button image to be that of what was chosen (dictionary)
-            pieceImage.color = Color.white;
-            pieceImage.sprite = pieceSprite;
+        public void SetPieceIcon(int slotID, int pieceID)
+        {
+            _selectedPieceImages[slotID].sprite = _catalog.Get(pieceID).Icon;
         }
     }
 }

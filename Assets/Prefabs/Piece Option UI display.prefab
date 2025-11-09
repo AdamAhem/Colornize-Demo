@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pieceID: 0
-  _pieceImage: {fileID: 7976610535171356997}
   _selectionStateData: {fileID: 11400000, guid: 747b9ad4ab00c71429d6bf820f380b8c, type: 2}
+  _choosePieceEvent: {fileID: 11400000, guid: 43e839b00428cd64da8d136b85bab466, type: 2}
 --- !u!1 &6551859894003971534
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,4 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveDisplayer: {fileID: 0}
+  _pieceNameText: {fileID: 0}
   _pieceID: 0
+  _pieceName: 
