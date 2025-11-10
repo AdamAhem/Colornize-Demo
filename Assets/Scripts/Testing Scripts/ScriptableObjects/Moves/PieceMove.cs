@@ -7,7 +7,7 @@ namespace Game
     {
         public PieceMoveLimit Limit;
 
-        public abstract List<Vector2> Get(int x, int y, Vector2 size);
+        public abstract List<Coordinate> Get(int x, int y, Coordinate size);
 
         public MoveContext GetMoveContext(int movesLeft, int currentPlayerID, int targetPlayerID) => Limit.GetMoveLimitContext(movesLeft, currentPlayerID, targetPlayerID);
 

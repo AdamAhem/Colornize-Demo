@@ -16,8 +16,8 @@ namespace Game
         public string Name => _name;
         public Sprite Icon => _icon;
 
-        public List<Vector2> GetPossibleMoves(int x, int y, Vector2 size) => _move.Get(x, y, size);
+        public List<Coordinate> GetPossibleMoves(Coordinate center, Coordinate size) => _move.Get(center.X, center.Y, size);
 
-        public MoveContext GetMoveCostAndType(int movesLeft, int currentPlayerID, int targetPlayerID) => _move.GetMoveContext(movesLeft, currentPlayerID, targetPlayerID);
+        public MoveContext GetMoveContext(int movesLeft, int currentPlayerID, int targetPlayerID) => _move.GetMoveContext(movesLeft, currentPlayerID, targetPlayerID);
     }
 }

@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d66d6df66bc6c74b8f3212a918c5f7e, type: 3}
   m_Name: BUILD GAMEPLAY DATA
   m_EditorClassIdentifier: 
-  _piecesPerPlayer: 3
-  _numberOfPlayers: 0
-  _playerConfig: []
+  _maxMoves: 2
+  _defaultFirstPlayerID: 0
+  _playerGameplayData: []
+  _currentPlayerID: 5
+  _movesLeft: 2
+  _pieceSelected: 0
+  _selectedPiecePosition:
+    X: 0
+    Y: 0

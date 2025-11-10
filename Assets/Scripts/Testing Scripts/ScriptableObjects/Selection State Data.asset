@@ -12,11 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a763ce963473244b29c851da38be48, type: 3}
   m_Name: Selection State Data
   m_EditorClassIdentifier: 
-  _defaultNumberOfPlayers: 4
+  _defaultNumberOfPlayers: 6
   _piecesPerPlayer: 3
   _addPieceToPlayerEvent: {fileID: 11400000, guid: cf792eb24878c0942a1473754f060041, type: 2}
   _choosePieceEvent: {fileID: 11400000, guid: 43e839b00428cd64da8d136b85bab466, type: 2}
   _recentlySelectedPlayerID: -1
   _recentlySelectedSlotID: -1
   _recentlySelectedPieceID: -1
-  _selectionData: []
+  _selectionData:
+  - PlayerID: 0
+    PieceIDs: 000000000800000009000000
+  - PlayerID: 1
+    PieceIDs: 050000000600000009000000
+  - PlayerID: 2
+    PieceIDs: 050000000600000002000000
+  - PlayerID: 3
+    PieceIDs: 030000000100000003000000
+  - PlayerID: 4
+    PieceIDs: 070000000800000007000000
+  - PlayerID: 5
+    PieceIDs: 070000000200000005000000

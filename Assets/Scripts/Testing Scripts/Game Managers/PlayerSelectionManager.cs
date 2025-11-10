@@ -50,7 +50,6 @@ namespace Game
         {
             Debug.Log("<color=lime>Selection Manager Enabled</color>");
 
-            // NEED TO DO SOME ADDITIONAL CHECKS HERE.
 
             if (!_selectionStateData.PlayerConfigAvailable)
             {
@@ -96,7 +95,7 @@ namespace Game
 
         #endregion
 
-        #region Unity Event Button Methods
+        #region Unity event button mMethods
 
         public void OnIncreasePlayerCount_UI_BUTTON()
         {

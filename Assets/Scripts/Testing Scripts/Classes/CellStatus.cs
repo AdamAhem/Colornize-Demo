@@ -17,7 +17,8 @@ namespace Game
         public int PlayerID => _playerID;
         public int PieceID => _pieceID;
 
-        public bool IsOccupied => _playerID != Defaults.PLAYER_ID;
+        public bool IsColored => _playerID != Defaults.PLAYER_ID;
+        public bool IsOccupied => _pieceID != Defaults.PIECE_ID;
 
         public CellStatus(BoardCell cell)
         {
@@ -29,6 +30,8 @@ namespace Game
         public void SetPlayerID(int playerID) => _playerID = playerID;
         public void SetPieceID(int pieceID) => _pieceID = pieceID;
 
+        public void SetAsUnoccupied() => _pieceID = Defaults.PIECE_ID;
+
         public void SetPlayerAndPieceID(int playerID, int pieceID)
         {
             SetPlayerID(playerID);
@@ -39,11 +42,6 @@ namespace Game
         {
             _playerID = Defaults.PLAYER_ID;
             _pieceID = Defaults.PIECE_ID;
-        }
-
-        public Vector2[] GetAndHighlightPossibleMoves()
-        {
-            return _cell.GetAndHighlightPossibleMoves(_playerID, _pieceID);
         }
     }
 }

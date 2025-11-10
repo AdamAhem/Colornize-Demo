@@ -19,7 +19,11 @@ namespace Game
         [SerializeField][ReadOnly] private int _previouslySelectedSlotID;
         [SerializeField][ReadOnly] private int _piecesPlaced;
         [SerializeField][ReadOnly] private int _expectedPieces;
+        [SerializeField][ReadOnly] private bool _reusableData;
 
+        public bool PlacementDataReusable => _reusableData;
+
+        public int PlayerCount => _placementData.Length;
         public int CurrentPlayerID => _currentPlayerID;
         public int RecentSlotID => _recentlySelectedSlotID;
         public int PreviousSlotID => _previouslySelectedSlotID;
@@ -49,6 +53,11 @@ namespace Game
         public void ResetPiecesPlaced()
         {
             _piecesPlaced = 0;
+        }
+
+        public void ClearPlacementData()
+        {
+            _placementData = null;
         }
 
         public void InitializePlacementData(SelectionStateData selectionData)
@@ -96,6 +105,11 @@ namespace Game
             data.SetPosition(placedPosition);
         }
 
+        public void MarkPlacementDataAsUnusable(bool usable)
+        {
+            _reusableData = usable;
+        }
+
         public PlacementData[] GetPlayerPlacementData(int playerID) => _placementData[playerID];
 
         public int GetPlayerPieceAtSlot(int playerID, int slotID) => _placementData[playerID][slotID].PieceID;
@@ -110,7 +124,5 @@ namespace Game
             if (_previouslySelectedSlotID == Defaults.SLOT_ID) return false;
             return _placementData[_currentPlayerID][_previouslySelectedSlotID].IsPlaced;
         }
-
-        public bool IsPiecePlaced(int playerID, int slotID) => GetPlayerPlacementData(playerID)[slotID].IsPlaced;
     }
 }

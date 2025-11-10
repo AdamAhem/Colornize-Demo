@@ -21,12 +21,20 @@ namespace Game
         [SerializeField] private Color _defaultBgColor;
         [SerializeField][Range(0, 1)] private float _backgroundDim;
 
-        private int _score;
-
         public void ResetScore()
         {
-            _score = 0;
             _scoreText.text = "00";
+        }
+
+        public void SetScore(int score)
+        {
+            UpdateScoreText(score);
+        }
+
+        public void SetAsActiveColor(bool isActive)
+        {
+            if (isActive) Enable();
+            else Disable();
         }
 
         public void Enable()
@@ -46,17 +54,20 @@ namespace Game
             _backgroundImage.color = _defaultBgColor;
         }
 
+        public void Show()
+        {
+            gameObject.SetActive(true);
+        }
+
         public void Hide()
         {
             gameObject.SetActive(false);
         }
 
-        public void AddPoint()
+        private void UpdateScoreText(int score)
         {
-            _score++;
-
-            int tens = _score < 10 ? 0 : _score / 10;
-            int ones = _score % 10;
+            int tens = score < 10 ? 0 : score / 10;
+            int ones = score % 10;
             _scoreText.text = $"{tens}{ones}";
         }
     }

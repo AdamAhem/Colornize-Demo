@@ -14,9 +14,9 @@ namespace Game
 
         private readonly int _maxSumOfSquares = 8;
 
-        public override List<Vector2> Get(int x, int y, Vector2 size)
+        public override List<Coordinate> Get(int x, int y, Coordinate size)
         {
-            List<Vector2> allMoves = new List<Vector2>(Defaults.MAX_POSSIBLE_MOVES);
+            List<Coordinate> allMoves = new List<Coordinate>(Defaults.MAX_POSSIBLE_MOVES);
 
             int dx;
             int dy;
@@ -33,7 +33,7 @@ namespace Game
 
                     if ((dx * dx) + (dy * dy) == _maxSumOfSquares || !IsValid(xPos, yPos, size)) continue;
 
-                    allMoves.Add(new Vector2(xPos, yPos));
+                    allMoves.Add(new Coordinate(xPos, yPos));
                 }
             }
 

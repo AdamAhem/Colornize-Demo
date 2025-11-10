@@ -6,19 +6,19 @@ namespace Game
     [CreateAssetMenu(fileName = "Courier Move", menuName = "SO/Piece Moves/Courier")]
     public class CourierMove : PieceMove
     {
-        public override List<Vector2> Get(int x, int y, Vector2 size)
+        public override List<Coordinate> Get(int x, int y, Coordinate size)
         {
-            List<Vector2> allMoves = new(Defaults.MAX_POSSIBLE_MOVES);
+            List<Coordinate> allMoves = new(Defaults.MAX_POSSIBLE_MOVES);
 
-            int xMax = (int)size.x - 1;
-            int yMax = (int)size.y - 1;
+            int xMax = size.X - 1;
+            int yMax = size.Y - 1;
 
             // top right
             int dx = 1;
             int dy = 1;
             while (x + dx <= xMax && y + dy <= yMax)
             {
-                allMoves.Add(new Vector2(x + dx, y + dy));
+                allMoves.Add(new Coordinate(x + dx, y + dy));
                 dx++;
                 dy++;
             }
@@ -28,7 +28,7 @@ namespace Game
             dy = 1;
             while (x - dx >= 0 && y + dy <= yMax)
             {
-                allMoves.Add(new Vector2 (x - dx, y + dy));
+                allMoves.Add(new Coordinate(x - dx, y + dy));
                 dx++;
                 dy++;
             }
@@ -38,7 +38,7 @@ namespace Game
             dy = 1;
             while (x - dx >= 0 && y - dy >= 0)
             {
-                allMoves.Add(new Vector2(x - dx, y - dy));
+                allMoves.Add(new Coordinate(x - dx, y - dy));
                 dx++;
                 dy++;
             }
@@ -48,7 +48,7 @@ namespace Game
             dy = 1;
             while (x + dx <= xMax && y - dy >= 0)
             {
-                allMoves.Add(new Vector2(x + dx, y - dy));
+                allMoves.Add(new Coordinate(x + dx, y - dy));
                 dx++;
                 dy++;
             }

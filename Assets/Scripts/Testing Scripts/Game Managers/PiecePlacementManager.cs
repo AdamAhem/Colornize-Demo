@@ -5,12 +5,8 @@ namespace Game
 {
     public class PiecePlacementManager : MonoBehaviour
     {
-        [Header("INITIALIZATION STATUS")]
-        [SerializeField][ReadOnly] private bool _initialized = false;
-
         [Header("Components")]
         [SerializeField] private PlacementPiecesInterface[] _interfaces;
-        [SerializeField] private GameManager _gameManager;
         [SerializeField] private Button _playButton;
         [SerializeField] private Button _confirmButton;
 
@@ -28,20 +24,7 @@ namespace Game
         [SerializeField] private GameEvent _placementToSelectionTransitionEvent;
         [SerializeField] private GameEvent _placementToGameplayTransitionEvent;
 
-        public void Initialize()
-        {
-            if (_initialized)
-            {
-                Debug.Log($"<color=magenta>Placement Manager already initialized</color>");
-                return;
-            }
-
-            Debug.Log("<color=lime>Placement Manager Initialized</color>");
-
-            _initialized = true;
-
-            // this initialize method may not be necessary at all.
-        }
+        #region Manager methods
 
         public void Enable()
         {
@@ -51,6 +34,12 @@ namespace Game
 
             // reset (most) placement data
             _placementStateData.ResetCurrentData();
+
+            if (_placementStateData.PlacementDataReusable)
+            {
+                ReuseExistingPlacementData();
+                return;
+            }
 
             // UPDATING DATA - generating a new jagged array of data for keeping track of if each player's piece is placed, and at which position
             _placementStateData.InitializePlacementData(_selectionStateData);
@@ -103,11 +92,13 @@ namespace Game
             _mainDisplayObject.SetActive(false);
         }
 
-        #region Unity Event Button Methods;
+        #endregion
+
+        #region Unity event button methods
 
         public void OnPressPlay_UI_BUTTON()
         {
-            Debug.Log("pressed play.");
+            _placementToGameplayTransitionEvent.Raise();
         }
 
         public void OnPressReset_UI_BUTTON()
@@ -227,6 +218,7 @@ namespace Game
             // as such, all interfaces must be disabled (do not touch color scheme)
             // and the play button should be enabled (and confirm button disabled)
 
+
             for (int playerID = 0; playerID < _selectionStateData.PlayerCount; playerID++)
             {
                 var playerInterface = _interfaces[playerID];
@@ -250,65 +242,6 @@ namespace Game
         public void OnPressQuit_UI_BUTTON()
         {
             Debug.Log("<color=red>PRESSED QUIT BUTTON - WORK IN PROGRESS</color>");
-        }
-
-        public void OnPressPieceButton_UI_Button(int slotID)
-        {
-            Debug.Log($"clicked piece button from player: (current player) -> slot {slotID} ");
-        }
-
-        #endregion
-
-        private void OnClickCell(Coordinate position)
-        {
-            int recentPlayerID = _placementStateData.CurrentPlayerID;
-            int recentSlotID = _placementStateData.RecentSlotID;
-
-            // case 1: no piece selected: DO NOTHING, REGARDLESS OF WHICH CELL IS CLICKED.
-            bool pieceChosen = _placementStateData.RecentSlotID != Defaults.SLOT_ID;
-            if (!pieceChosen) return;
-
-            // all cases moving forward include a piece already being chosen.
-            CellStatus clickedCellStatus = _boardStatus.GetCellStatusAtPosition(position);
-            BoardCell cell = clickedCellStatus.Cell;
-            int cellOccupantID = clickedCellStatus.PlayerID;
-
-            // case 2: clicked on empty cell (cell occupant ID == -1)
-            if (cellOccupantID == Defaults.PLAYER_ID)
-            {
-                PlacementData placementData = _placementStateData.GetPlayerPlacementData(recentPlayerID)[recentSlotID];
-                int pieceID = placementData.PieceID;
-                bool pieceAlreadyPlaced = placementData.IsPlaced;
-
-                if (pieceAlreadyPlaced)
-                {
-                    // need to move that piece elsewhere (get its coordinate)
-                    Coordinate previousClickedCellPosition = placementData.Position;
-
-                    CellStatus previousCellStatus = _boardStatus.GetCellStatusAtPosition(previousClickedCellPosition);
-                    BoardCell previousCell = previousCellStatus.Cell;
-
-                    previousCellStatus.ResetIDs();
-
-                    previousCell.ResetCellColor();
-
-                    previousCell.ResetHighlightIcon();
-                }
-
-                // UPDATE DATA - update cell status player ID and piece ID
-                clickedCellStatus.SetPlayerAndPieceID(recentPlayerID, pieceID);
-
-                // UPDATE DATA - placement data (bool flag is placed AND coordinate)
-                _placementStateData.SetPlayerPieceAtSlotAsPlaced(recentPlayerID, recentSlotID, position);
-
-                // VISUAL UPDATE - color the cell with the color of the player.
-                cell.SetCellColorAsPlayerColor(recentPlayerID);
-
-                // VISUAL UPDATE - set the cell's icon as the placed piece.
-                cell.SetHighlightIconAsPiece(pieceID);
-            }
-
-            _confirmButton.interactable = true;
         }
 
         private void OnClickedPieceButton()
@@ -364,6 +297,66 @@ namespace Game
             _placementStateData.UpdatePreviousData();
         }
 
+        #endregion
+
+        #region Click cell event methods
+
+        private void OnClickCell(Coordinate position)
+        {
+            int recentPlayerID = _placementStateData.CurrentPlayerID;
+            int recentSlotID = _placementStateData.RecentSlotID;
+
+            // case 1: no piece selected: DO NOTHING, REGARDLESS OF WHICH CELL IS CLICKED.
+            bool pieceChosen = _placementStateData.RecentSlotID != Defaults.SLOT_ID;
+            if (!pieceChosen) return;
+
+            // all cases moving forward include a piece already being chosen.
+            CellStatus clickedCellStatus = _boardStatus.GetCellStatusAtPosition(position);
+            BoardCell cell = clickedCellStatus.Cell;
+            int cellOccupantID = clickedCellStatus.PlayerID;
+
+            // case 2: clicked on empty cell (cell occupant ID == -1)
+            if (cellOccupantID == Defaults.PLAYER_ID)
+            {
+                PlacementData placementData = _placementStateData.GetPlayerPlacementData(recentPlayerID)[recentSlotID];
+                int pieceID = placementData.PieceID;
+                bool pieceAlreadyPlaced = placementData.IsPlaced;
+
+                if (pieceAlreadyPlaced)
+                {
+                    // need to move that piece elsewhere (get its coordinate)
+                    Coordinate previousClickedCellPosition = placementData.Position;
+
+                    CellStatus previousCellStatus = _boardStatus.GetCellStatusAtPosition(previousClickedCellPosition);
+                    BoardCell previousCell = previousCellStatus.Cell;
+
+                    previousCellStatus.ResetIDs();
+
+                    previousCell.ResetCellColor();
+
+                    previousCell.ClearHighlightIcon();
+                }
+
+                // UPDATE DATA - update cell status player ID and piece ID
+                clickedCellStatus.SetPlayerAndPieceID(recentPlayerID, pieceID);
+
+                // UPDATE DATA - placement data (bool flag is placed AND coordinate)
+                _placementStateData.SetPlayerPieceAtSlotAsPlaced(recentPlayerID, recentSlotID, position);
+
+                // VISUAL UPDATE - color the cell with the color of the player.
+                cell.SetCellColorAsPlayerColor(recentPlayerID);
+
+                // VISUAL UPDATE - set the cell's icon as the placed piece.
+                cell.SetHighlightIconAsPiece(pieceID);
+            }
+
+            _confirmButton.interactable = true;
+        }
+
+        #endregion
+
+        #region Utility methods
+
         private void ResetPlacement()
         {
             _placementStateData.ResetCurrentData();
@@ -384,7 +377,7 @@ namespace Game
 
                     status.ResetIDs();
 
-                    cell.ResetHighlightIcon();
+                    cell.ClearHighlightIcon();
                     cell.ResetCellColor();
 
                     data.ResetData();
@@ -399,5 +392,36 @@ namespace Game
                 playerInterface.ToggleAllSlotButtonActiveColor(false);
             }
         }
+
+        private void ReuseExistingPlacementData()
+        {
+            // reuse the placement data
+
+            for (int i = 0; i < _placementStateData.PlayerCount; i++)
+            {
+                var x = _placementStateData.GetPlayerPlacementData(i);
+                for (int j = 0; j < x.Length; j++)
+                {
+                    var y = x[j];
+
+                    int playerID = i;
+                    int pieceID = y.PieceID;
+
+                    Debug.Log((Vector2)y.Position);
+
+                    // DATA
+                    CellStatus status = _boardStatus.GetCellStatusAtPosition(y.Position);
+                    status.SetPlayerAndPieceID(playerID, pieceID);
+
+                    // VISUAL - updating cell visuals
+                    BoardCell cell = status.Cell;
+                    cell.SetCellColorAsPlayerColor(playerID);
+                    cell.SetHighlightIconAsPiece(pieceID);
+                    cell.SetHighlightAsActive(true);
+                }
+            }
+        }
+
+        #endregion
     }
 }

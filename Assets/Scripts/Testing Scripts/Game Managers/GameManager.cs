@@ -19,8 +19,8 @@ namespace Game
         [SerializeField] private BoardManager _boardManager;
 
         [Header("Data")]
-        [SerializeField] private GameplayStateData _gameData;
         [SerializeField] private SelectionStateData _selectionData;
+        [SerializeField] private PlacementStateData _placementData;
         [SerializeField] private Colors _defaultColors;
         [SerializeField] private Colors _gameplayColors;
 
@@ -29,16 +29,6 @@ namespace Game
         [SerializeField] private GameEvent _placementToSelectionTransitionEvent;
         [SerializeField] private GameEvent _placementToGameplayTransitionEvent;
         [SerializeField] private GameEvent _gameplayToPlacementTransitionEvent;
-
-        //public void OnPressConfirmToPlay()
-        //{
-        //    _currentPhase = GamePhase.Gameplay;
-
-        //    DisablePlacement();
-
-        //    InitializeGameplay();
-        //    EnableGameplay();
-        //}
 
         private void Awake()
         {
@@ -50,8 +40,6 @@ namespace Game
             switch (_currentPhase)
             {
                 case GamePhase.Selection: InitializeSelection(); break;
-                case GamePhase.Placement: InitializePlacement(); break;
-                case GamePhase.Gameplay: InitializeGameplay(); break;
             }
         }
 
@@ -79,18 +67,6 @@ namespace Game
             IgnoreTransitionEvents();
         }
 
-        private void OnDestroy()
-        {
-            _selectionData.ResetAllDataToDefaults();
-
-            switch (_currentPhase)
-            {
-                case GamePhase.Selection: ResetSelection(); break;
-                case GamePhase.Placement: ResetPlacement(); break;
-                case GamePhase.Gameplay: ResetGameplay(); break;
-            }
-        }
-
         private void HideEverything()
         {
             // hide selection manager
@@ -108,9 +84,9 @@ namespace Game
 
         private void ResetToDefaults()
         {
-            _gameData.ResetData();
             _selectionData.ResetAllDataToDefaults();
             _gameplayColors.List = _defaultColors.List;
+            _placementData.ClearPlacementData();
         }
 
         #region selection methods
@@ -132,71 +108,39 @@ namespace Game
             _selectionManager.Disable();
         }
 
-        private void ResetSelection()
-        {
-            _gameData.ResetData();
-        }
-
         #endregion
 
         #region placement methods
 
-        private void InitializePlacement()
-        {
-            _boardManager.InitializeBoard();
-            _placementManager.Initialize();
-        }
-
         private void EnablePlacement()
         {
-            _boardManager.Show();
-
             _placementManager.Enable();
             _placementManager.Show();
         }
 
         private void DisablePlacement()
         {
-            _boardManager.Hide();
-
             _placementManager.Hide();
             _placementManager.Disable();
-        }
-
-        private void ResetPlacement()
-        {
-
         }
 
         #endregion
 
         #region gameplay methods
 
-        private void InitializeGameplay()
-        {
-            _selectionManager.gameObject.SetActive(false);
-            //_placementMain.SetActive(false);
-            _gameplayManager.Initialize();
-        }
-
         private void EnableGameplay()
         {
             _gameplayManager.Enable();
-            //_scoreboardMain.SetActive(true);
+            _gameplayManager.Show();
         }
 
         private void DisableGameplay()
         {
             _gameplayManager.Disable();
-        }
-
-        private void ResetGameplay()
-        {
-
+            _gameplayManager.Hide();
         }
 
         #endregion
-
 
         #region transition methods
 
@@ -221,9 +165,12 @@ namespace Game
             Debug.Log($"<color=cyan>TRANSITIONING FROM SELECTION TO PLACEMENT.</color>");
             _currentPhase = GamePhase.Placement;
 
-            DisableSelection();
+            _placementData.MarkPlacementDataAsUnusable(false);
 
-            InitializePlacement();
+            _boardManager.InitializeBoard(); // board must be initialized at least once. method also automatically checks if the board has already been initialized.
+            _boardManager.Show();
+
+            DisableSelection();
             EnablePlacement();
         }
 
@@ -233,20 +180,36 @@ namespace Game
 
             _currentPhase = GamePhase.Selection;
 
-            DisablePlacement();
+            _placementData.MarkPlacementDataAsUnusable(false);
 
-            //InitializeSelection();
+            _boardManager.Hide();
+
+            DisablePlacement();
             EnableSelection();
         }
 
         private void OnTransitionFromPlacementToGameplay()
         {
-            Debug.Log("pla -> gam");
+            Debug.Log($"<color=cyan>TRANSITIONING FROM PLACEMENT TO GAMEPLAY.</color>");
+
+            _currentPhase = GamePhase.Gameplay;
+
+            _placementData.MarkPlacementDataAsUnusable(true);
+
+            DisablePlacement();
+            EnableGameplay();
         }
 
         private void OnTransitionFromGameplayToPlacement()
         {
-            Debug.Log("gam -> pla");
+            Debug.Log($"<color=cyan>TRANSITIONING FROM GAMEPLAY TO PLACEMENT.</color>");
+
+            _currentPhase = GamePhase.Placement;
+
+            _placementData.MarkPlacementDataAsUnusable(true);
+
+            DisableGameplay();
+            EnablePlacement();
         }
 
         #endregion

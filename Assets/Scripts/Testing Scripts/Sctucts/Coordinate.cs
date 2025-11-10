@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game
 {
     [Serializable]
-    public struct Coordinate
+    public struct Coordinate : IEquatable<Coordinate>
     {
         public int X;
         public int Y;
@@ -33,6 +33,30 @@ namespace Game
             return new Coordinate(x, y);
         }
 
+        public bool Equals(Coordinate other) => this == other;
+
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(X, Y);
+        }
+
         public static Coordinate Zero => new Coordinate(0, 0);
+
+        public static implicit operator Vector2(Coordinate c)
+        {
+            return new Vector2(c.X, c.Y);
+        }
+
+        public static bool operator ==(Coordinate a, Coordinate b)
+        {
+            return a.X == b.X && a.Y == b.Y;
+        }
+
+        public static bool operator !=(Coordinate a, Coordinate b) => !(a == b);
     }
 }

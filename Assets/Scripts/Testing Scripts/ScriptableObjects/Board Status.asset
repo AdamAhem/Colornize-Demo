@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Board Status
   m_EditorClassIdentifier: 
   _boardDimensions:
-    X: 0
-    Y: 0
+    X: 10
+    Y: 10
+  _catalog: {fileID: 11400000, guid: 9e8ef51f4bc3a1a42bda9f4a1cdcc78e, type: 2}
