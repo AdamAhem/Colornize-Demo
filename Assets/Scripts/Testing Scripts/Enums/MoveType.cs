@@ -2,7 +2,7 @@ namespace Game
 {
     public enum MoveType
     {
-        Move,
+        Translate,
         Color,
         Both
     }

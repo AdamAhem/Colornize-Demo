@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace Game
@@ -14,13 +15,20 @@ namespace Game
         [SerializeField][ReadOnly] private int _currentPlayerID;
         [SerializeField][ReadOnly] private int _movesLeft;
         [SerializeField][ReadOnly] private bool _pieceSelected;
+        [SerializeField][ReadOnly] private int _maxScore;
+        [SerializeField][ReadOnly] private int _currentTotalScore;
+
         [SerializeField] private Coordinate _selectedPiecePosition;
 
+
+        public bool MaxScoreReached => _currentTotalScore >= _maxScore;
         public int CurrentPlayerID => _currentPlayerID;
         public int MovesLeft => _movesLeft;
         public bool HasMaxMoves => _movesLeft == _maxMoves;
         public bool PieceSelected => _pieceSelected;
         public Coordinate SelectedPiecePosition => _selectedPiecePosition;
+        public int TotalScore => _currentTotalScore;
+
 
         public void ResetAllData()
         {
@@ -35,6 +43,14 @@ namespace Game
             _pieceSelected = false;
             _selectedPiecePosition = default;
         }
+
+        public void ResetScoreData(int initialScore, int maxScore)
+        {
+            _currentTotalScore = initialScore;
+            _maxScore = maxScore;
+        }
+
+        public void SetTotalScore(int totalScore) => _currentTotalScore = totalScore;
 
         public void GenerateNewScoreboard(PlacementStateData placementStateData)
         {
@@ -86,6 +102,37 @@ namespace Game
             _selectedPiecePosition = default;
         }
 
+        public PlayerGameplayData GetCurrentPlayerData() => GetPlayerData(_currentPlayerID);
+
         public PlayerGameplayData GetPlayerData(int playerID) => _playerGameplayData[playerID];
+
+        public int ScoreSum() => _playerGameplayData.Sum(x => x.Score);
+
+        public int GetMaxScore() => _playerGameplayData.Max(x => x.Score);
+
+        public int[] GetPlayersWithScore(int score)
+        {
+            int[] players;
+            int numberOfPlayersWithScore = 0;
+            for (int i = 0; i < _playerGameplayData.Length; i++)
+            {
+                var data = _playerGameplayData[i];
+
+                if (data.Score == score) numberOfPlayersWithScore++;
+            }
+
+            players = new int[numberOfPlayersWithScore];
+            int counter = 0;
+            for (int i = 0; i < _playerGameplayData.Length; i++)
+            {
+                var data = _playerGameplayData[i];
+                if (data.Score == score)
+                {
+                    players[counter] = i;
+                    counter++;
+                }
+            }
+            return players;
+        }
     }
 }

@@ -34,6 +34,15 @@ namespace Game
 
             SetupBoardWithPlacementSettings();
 
+            Coordinate boardSize = _boardStatus.Dimensions;
+            int columns = boardSize.X;
+            int rows = boardSize.Y;
+
+            int maxScore = rows * columns;
+            int initialScore = _gameplayStateData.ScoreSum();
+
+            _gameplayStateData.ResetScoreData(initialScore, maxScore);
+
             // EVENT OBSERVATION
             _cellClickedEvent.AddEvent(OnClickCell);
         }
@@ -63,44 +72,20 @@ namespace Game
 
         public void OnPressReturn_UI_BUTTON()
         {
-            Debug.Log("pressed return");
             ResetGame();
-
             _gameplayToPlacementTransitionEvent.Raise();
         }
 
         public void OnPressRestart_UI_BUTTON()
         {
-            // 1) reset all game data
             ResetGame();
-
-            // 2) place the pieces in their original positions.
-            for (int playerID = 0; playerID < _placementStateData.PlayerCount; playerID++)
-            {
-                PlacementData[] placementData = _placementStateData.GetPlayerPlacementData(playerID);
-
-                for (int slotID = 0; slotID < placementData.Length; slotID++)
-                {
-                    PlacementData data = placementData[slotID];
-                    Coordinate position = data.Position;
-                    int pieceID = data.PieceID;
-
-                    CellStatus status = _boardStatus.GetCellStatusAtPosition(position);
-                    status.SetPlayerAndPieceID(playerID, pieceID);
-
-                    BoardCell cell = status.Cell;
-                    cell.SetCellColorAsPlayerColor(playerID);
-                    cell.SetHighlightIconAsPiece(pieceID);
-                }
-            }
-
-            // 3) re-initialize placement (from placement data)
+            SetupBoardWithPlacementData();
             SetupBoardWithPlacementSettings();
         }
 
-        public void OnPressQuit_UI_BUTTON()
+        public void OnPressEnd_UI_BUTTON()
         {
-            Debug.Log("<color=red>PRESSED QUIT BUTTON - WORK IN PROGRESS</color>");
+            Debug.Log("pressed end.");
         }
 
         #endregion
@@ -115,8 +100,6 @@ namespace Game
             bool pieceSelected = _gameplayStateData.PieceSelected;
             bool clickedOnOwnColor = clickedStatus.PlayerID == currentPlayerID;
             bool clickedOnGrayCell = !clickedStatus.IsColored;
-
-            Debug.Log($"{pieceSelected}, {clickedOnOwnColor}, {clickedOnGrayCell}");
 
             // case 1: clicked in a cell that isn't occupied by the player while NO piece is selected. In this case, exit early.
             if (!clickedOnOwnColor && !pieceSelected) return;
@@ -228,88 +211,14 @@ namespace Game
 
             // if it is a valid move, then the selected piece can perform a move. Obtain the move context.
             MoveContext moveContext = pieceInfo.GetMoveContext(_gameplayStateData.MovesLeft, currentPlayerID, clickedPositionPlayerID);
-            PlayerGameplayData gameplayData = _gameplayStateData.GetPlayerData(currentPlayerID);
-            bool sameColor = target.PlayerID == currentPlayerID;
 
             switch (moveContext.Type)
             {
-                case MoveType.Move:
-
-
-                    for (int i = 0; i < gameplayData.PiecePositions.Length; i++)
-                    {
-                        var x = gameplayData.PiecePositions[i];
-                        //bool sameID = x.PieceID == pieceID;
-                        bool samePos = x.Position == currentPosition;
-
-                        if (samePos)
-                        {
-                            gameplayData.UpdatePiecePosition(i, targetPosition);
-                            break;
-                        }
-                    }
-
-                    // CELL STATUS DATA UPDATE: swap positions.
-                    current.SetAsUnoccupied();
-                    target.SetPlayerAndPieceID(currentPlayerID, pieceID);
-
-                    _gameplayStateData.SetSelectedPiecePosition(targetPosition);
-
-                    // VISUAL UPDATE: move piece from first board to second board
-                    current.Cell.ClearHighlightIcon();
-                    target.Cell.SetHighlightIconAsPiece(pieceID);
-
-
-                    break;
-                case MoveType.Color:
-
-                    target.SetPlayerID(currentPlayerID);
-                    target.Cell.SetCellColorAsPlayerColor(currentPlayerID);
-
-                    if (sameColor) break;
-                    gameplayData.AddPoint(1);
-                    _playerScores[currentPlayerID].SetScore(gameplayData.Score);
-
-
-                    break;
+                case MoveType.Translate: DoTranslateMove(currentPosition, targetPosition); break;
+                case MoveType.Color: DoColorMove(currentPosition, targetPosition); break;
                 case MoveType.Both:
-
-                    // MOVING
-
-                    // GAMEPLAY STATE DATA UPDATE: update player gameplay data
-
-                    for (int i = 0; i < gameplayData.PiecePositions.Length; i++)
-                    {
-                        var x = gameplayData.PiecePositions[i];
-                        //bool sameID = x.PieceID == pieceID;
-                        bool samePos = x.Position == currentPosition;
-
-                        if (samePos)
-                        {
-                            gameplayData.UpdatePiecePosition(i, targetPosition);
-                            break;
-                        }
-                    }
-
-                    // CELL STATUS DATA UPDATE: swap positions.
-                    current.SetAsUnoccupied();
-                    target.SetPlayerAndPieceID(currentPlayerID, pieceID);
-
-                    _gameplayStateData.SetSelectedPiecePosition(targetPosition);
-
-                    // VISUAL UPDATE: move piece from first board to second board
-                    current.Cell.ClearHighlightIcon();
-                    target.Cell.SetHighlightIconAsPiece(pieceID);
-
-                    // COLORING
-
-                    target.Cell.SetCellColorAsPlayerColor(currentPlayerID);
-
-                    // increase score (data and visual)
-                    if (sameColor) break;
-                    gameplayData.AddPoint(1);
-                    _playerScores[currentPlayerID].SetScore(gameplayData.Score);
-
+                    DoColorMove(currentPosition, targetPosition);
+                    DoTranslateMove(currentPosition, targetPosition);
                     break;
             }
 
@@ -323,7 +232,6 @@ namespace Game
                 PlayerGameplayData data = _gameplayStateData.GetPlayerData(currentPlayerID);
                 for (int i = 0; i < data.PiecePositions.Length; i++)
                 {
-                    Debug.Log((Vector2)data.PiecePositions[i].Position);
                     _boardStatus.GetCellStatusAtPosition(data.PiecePositions[i].Position).Cell.SetHighlightAsActive(false);
                 }
 
@@ -347,6 +255,82 @@ namespace Game
                 Coordinate position = _gameplayStateData.SelectedPiecePosition;
                 _boardStatus.HighlightPieceMove(currentPlayerID, _boardStatus.GetCellStatusAtPosition(position).PieceID, position);
             }
+
+            CheckForWinners();
+        }
+
+        private void DoTranslateMove(Coordinate currentPosition, Coordinate targetPosition)
+        {
+            PlayerGameplayData gameplayData = _gameplayStateData.GetCurrentPlayerData();
+
+            CellStatus current = _boardStatus.GetCellStatusAtPosition(currentPosition);
+            CellStatus target = _boardStatus.GetCellStatusAtPosition(targetPosition);
+
+            int currentPlayerID = _gameplayStateData.CurrentPlayerID;
+            int pieceID = current.PieceID;
+
+            for (int i = 0; i < gameplayData.PiecePositions.Length; i++)
+            {
+                var x = gameplayData.PiecePositions[i];
+                bool samePos = x.Position == currentPosition;
+
+                if (samePos)
+                {
+                    gameplayData.UpdatePiecePosition(i, targetPosition);
+                    break;
+                }
+            }
+
+            // CELL STATUS DATA UPDATE: swap positions.
+            current.SetAsUnoccupied();
+            target.SetPlayerAndPieceID(currentPlayerID, pieceID);
+
+            _gameplayStateData.SetSelectedPiecePosition(targetPosition);
+
+            // VISUAL UPDATE: move piece from first board to second board
+            current.Cell.ClearHighlightIcon();
+            target.Cell.SetHighlightIconAsPiece(pieceID);
+        }
+
+        private void DoColorMove(Coordinate currentPosition, Coordinate targetPosition)
+        {
+            PlayerGameplayData gameplayData = _gameplayStateData.GetCurrentPlayerData();
+
+            CellStatus current = _boardStatus.GetCellStatusAtPosition(currentPosition);
+            CellStatus target = _boardStatus.GetCellStatusAtPosition(targetPosition);
+
+            int currentPlayerID = _gameplayStateData.CurrentPlayerID;
+            int pieceID = current.PieceID;
+
+            bool sameColor = target.PlayerID == currentPlayerID;
+
+            target.SetPlayerID(currentPlayerID);
+            target.Cell.SetCellColorAsPlayerColor(currentPlayerID);
+
+            if (sameColor) return;
+
+            int point = 1;
+
+            gameplayData.AddPoint(point);
+            _playerScores[currentPlayerID].SetScore(gameplayData.Score);
+            _gameplayStateData.SetTotalScore(_gameplayStateData.TotalScore + point);
+        }
+
+        private void CheckForWinners()
+        {
+            if (!_gameplayStateData.MaxScoreReached) return;
+
+            // loop once to get the maximum score
+            int highestScore = _gameplayStateData.GetMaxScore();
+
+            // loop again to get all players with that score
+            int[] playersWithHighestScore = _gameplayStateData.GetPlayersWithScore(highestScore);
+
+            Debug.Log("Winners:");
+            for (int i = 0; i < playersWithHighestScore.Length; i++)
+            {
+                Debug.Log(playersWithHighestScore[i]);
+            }
         }
 
         private void ResetGame()
@@ -357,6 +341,28 @@ namespace Game
 
             // 2) clear board
             _boardStatus.ClearBoard();
+        }
+
+        private void SetupBoardWithPlacementData()
+        {
+            for (int playerID = 0; playerID < _placementStateData.PlayerCount; playerID++)
+            {
+                PlacementData[] placementData = _placementStateData.GetPlayerPlacementData(playerID);
+
+                for (int slotID = 0; slotID < placementData.Length; slotID++)
+                {
+                    PlacementData data = placementData[slotID];
+                    Coordinate position = data.Position;
+                    int pieceID = data.PieceID;
+
+                    CellStatus status = _boardStatus.GetCellStatusAtPosition(position);
+                    status.SetPlayerAndPieceID(playerID, pieceID);
+
+                    BoardCell cell = status.Cell;
+                    cell.SetCellColorAsPlayerColor(playerID);
+                    cell.SetHighlightIconAsPiece(pieceID);
+                }
+            }
         }
 
         #endregion

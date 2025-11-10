@@ -15,7 +15,7 @@ namespace Game
                 bool sameCellColor = currentPlayerID == targetPlayerID;
 
                 cost = sameCellColor ? 2 : 1;
-                type = sameCellColor ? MoveType.Move : MoveType.Both;
+                type = sameCellColor ? MoveType.Translate : MoveType.Both;
             }
             else
             {

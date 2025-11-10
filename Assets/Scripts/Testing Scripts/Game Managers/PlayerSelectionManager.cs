@@ -180,11 +180,6 @@ namespace Game
             SetPlayable(true);
         }
 
-        public void OnPressQuit_UI_BUTTON()
-        {
-            Debug.Log("<color=red>PRESSED QUIT BUTTON - WORK IN PROGRESS</color>");
-        }
-
         #endregion
 
         #region Private methods
@@ -242,7 +237,6 @@ namespace Game
             int playerID = _selectionStateData.RecentPlayerID;
             if (playerID == Defaults.PLAYER_ID) return;
 
-            Debug.Log("clicked on choose piece.");
             // update the selection state data with the choice this player made.
             _selectionStateData.UpdatePlayerConfigWithRecentChoices();
 

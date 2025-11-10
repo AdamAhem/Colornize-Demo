@@ -239,11 +239,6 @@ namespace Game
             _placementToSelectionTransitionEvent.Raise();
         }
 
-        public void OnPressQuit_UI_BUTTON()
-        {
-            Debug.Log("<color=red>PRESSED QUIT BUTTON - WORK IN PROGRESS</color>");
-        }
-
         private void OnClickedPieceButton()
         {
             int currentSlotID = _placementStateData.RecentSlotID;
