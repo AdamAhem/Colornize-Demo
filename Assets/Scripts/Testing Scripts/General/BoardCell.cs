@@ -21,18 +21,18 @@ namespace Game
         [SerializeField][ReadOnly] private int _column;
 
         [Header("Events")]
-        [SerializeField] private GameEvent _clickCellEvent;
+        [SerializeField] private CoordinateEvent _clickCellEvent;
 
         [Header("Game Data")]
-        [SerializeField] private GameInstanceData _gameData;
+        [SerializeField] private GameplayStateData _gameData;
         [SerializeField] private PieceCatalog _pieceCatalog;
         [SerializeField] private Colors _colors;
 
         private bool _active = true;
 
-        public Vector2 Position => new(_row, _column);
+        public Coordinate Position => new(_row, _column);
 
-        public void SetGameData(GameInstanceData gameData) => _gameData = gameData;
+        public void SetGameData(GameplayStateData gameData) => _gameData = gameData;
 
         public void SetRowAndColumn(int row, int column)
         {
@@ -42,11 +42,7 @@ namespace Game
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            // set data (so that other scripts can read from it)
-            _gameData.SetLastClickedCellInfo(_row, _column);
-
-            // THEN raise click event.
-            _clickCellEvent.Raise();
+            _clickCellEvent.Raise(new Coordinate(_row, _column));
         }
 
         public void SetActiveHighlight()

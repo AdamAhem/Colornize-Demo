@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 7234591067002934135}
   - component: {fileID: 562417248653501867}
   - component: {fileID: 6254352243557644991}
+  - component: {fileID: 7855432960852423172}
   m_Layer: 5
   m_Name: Piece 1 Button
   m_TagString: Untagged
@@ -331,7 +332,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 562417248653501867}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7855432960852423172}
+        m_TargetAssemblyTypeName: Game.PiecePlacementButtonHandler, Assembly-CSharp
+        m_MethodName: OnPressPiece_UI_BUTTON
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7855432960852423172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2305849344835642473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf33a9749fd60945b736056426f16e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerID: 0
+  _slotID: 0
+  _clickedPiecePlacementButtonEvent: {fileID: 11400000, guid: 3226019e4a31a124f82b24df30ad8a2d, type: 2}
+  _placementStateData: {fileID: 11400000, guid: 579f59ec1964785499bc23924bb866ac, type: 2}
 --- !u!1 &3887406377601608756
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +373,7 @@ GameObject:
   - component: {fileID: 2773862004561857980}
   - component: {fileID: 2802544583429478557}
   - component: {fileID: 7586634502512030298}
+  - component: {fileID: 2074102843616090201}
   m_Layer: 5
   m_Name: Piece 2 Button
   m_TagString: Untagged
@@ -452,7 +482,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2802544583429478557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2074102843616090201}
+        m_TargetAssemblyTypeName: Game.PiecePlacementButtonHandler, Assembly-CSharp
+        m_MethodName: OnPressPiece_UI_BUTTON
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2074102843616090201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887406377601608756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf33a9749fd60945b736056426f16e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerID: 0
+  _slotID: 1
+  _clickedPiecePlacementButtonEvent: {fileID: 11400000, guid: 3226019e4a31a124f82b24df30ad8a2d, type: 2}
+  _placementStateData: {fileID: 11400000, guid: 579f59ec1964785499bc23924bb866ac, type: 2}
 --- !u!1 &4921842146382342989
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +523,7 @@ GameObject:
   - component: {fileID: 4913524504274445128}
   - component: {fileID: 338470008973275071}
   - component: {fileID: 5605576465861088778}
+  - component: {fileID: 6359593949625190622}
   m_Layer: 5
   m_Name: Piece 3 Button
   m_TagString: Untagged
@@ -573,7 +632,35 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 338470008973275071}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6359593949625190622}
+        m_TargetAssemblyTypeName: Game.PiecePlacementButtonHandler, Assembly-CSharp
+        m_MethodName: OnPressPiece_UI_BUTTON
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6359593949625190622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4921842146382342989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf33a9749fd60945b736056426f16e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerID: 0
+  _slotID: 2
+  _clickedPiecePlacementButtonEvent: {fileID: 11400000, guid: 3226019e4a31a124f82b24df30ad8a2d, type: 2}
+  _placementStateData: {fileID: 11400000, guid: 579f59ec1964785499bc23924bb866ac, type: 2}
 --- !u!1 &6938383042791134636
 GameObject:
   m_ObjectHideFlags: 0

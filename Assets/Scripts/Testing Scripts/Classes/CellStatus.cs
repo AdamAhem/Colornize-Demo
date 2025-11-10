@@ -17,6 +17,8 @@ namespace Game
         public int PlayerID => _playerID;
         public int PieceID => _pieceID;
 
+        public bool IsOccupied => _playerID != Defaults.PLAYER_ID;
+
         public CellStatus(BoardCell cell)
         {
             _cell = cell;
@@ -26,6 +28,12 @@ namespace Game
 
         public void SetPlayerID(int playerID) => _playerID = playerID;
         public void SetPieceID(int pieceID) => _pieceID = pieceID;
+
+        public void SetPlayerAndPieceID(int playerID, int pieceID)
+        {
+            SetPlayerID(playerID);
+            SetPieceID(pieceID);
+        }
 
         public void ResetIDs()
         {

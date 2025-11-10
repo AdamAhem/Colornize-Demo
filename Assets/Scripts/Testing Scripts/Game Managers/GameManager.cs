@@ -19,7 +19,7 @@ namespace Game
         [SerializeField] private BoardManager _boardManager;
 
         [Header("Data")]
-        [SerializeField] private GameInstanceData _gameData;
+        [SerializeField] private GameplayStateData _gameData;
         [SerializeField] private SelectionStateData _selectionData;
         [SerializeField] private Colors _defaultColors;
         [SerializeField] private Colors _gameplayColors;

@@ -9,14 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94255e7a4e85b3c49bff0b6ad3c0ec46, type: 3}
-  m_Name: Click Cell Event
+  m_Script: {fileID: 11500000, guid: 33a24769182320e44bc4a06c07c5d01a, type: 3}
+  m_Name: Click Piece Placement Button
   m_EditorClassIdentifier: 
-  Description: 'Raised when the player clicks on a board cell.
-
-
-    Passes the row
-    and column as a coordinate.
+  Description: 'Raised when one of the buttons for selecting a piece to place on
+    the board, DURING PLACEMENT PHASE, gets clicked.
 
 
     - last updated 9/11/25'

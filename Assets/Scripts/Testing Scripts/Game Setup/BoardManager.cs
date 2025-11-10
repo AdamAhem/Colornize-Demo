@@ -20,7 +20,8 @@ namespace Game
         [SerializeField] private GameObject _mainDisplayObject;
 
         [Header("Data")]
-        [SerializeField] private GameInstanceData _instanceData;
+        [SerializeField] private BoardStatus _boardStatus;
+        [SerializeField] private GameplayStateData _instanceData;
 
         public void InitializeBoard()
         {
@@ -33,7 +34,7 @@ namespace Game
             Debug.Log("<color=lime>Board Manager Initialized (new board built)</color>");
             _initialized = true;
 
-            _instanceData.GenerateNewBoard(_rows, _columns);
+            _boardStatus.InitializeBoardCellsStatus(_rows, _columns);
 
             Vector2 corner1Pos = _corner1.position;
             Vector2 corner2Pos = _corner2.position;
@@ -56,7 +57,7 @@ namespace Game
                 newCell.SetRowAndColumn(currentRow, currentCol);
 
                 newCell.SetGameData(_instanceData);
-                _instanceData.InitializeBoardPosition(currentRow, currentCol, newCell);
+                _boardStatus.SetCellWithBoardCellObject(currentRow, currentCol, newCell);
             }
         }
 

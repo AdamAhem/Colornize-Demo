@@ -27,13 +27,19 @@ namespace Game
 
         public void Hide() => gameObject.SetActive(false);
 
-        public void UseInActiveColors()
+        public void DisplayColorScheme(bool active)
+        {
+            if (active) DisplayActiveColorScheme();
+            else DisplayInactiveColorScheme();
+        }
+
+        public void DisplayInactiveColorScheme()
         {
             _background.color = _inactiveBackgroundColor;
             _playerText.color = _inactiveTextColor;
         }
 
-        public void UseActiveColor()
+        public void DisplayActiveColorScheme()
         {
             Color activeColor = _colors.List[_playerID];
 
@@ -41,14 +47,23 @@ namespace Game
             _playerText.color = activeColor;
         }
 
-        public void EnableSlotButtonInteraction(int slotID) => _pieceButtons[slotID].interactable = true;
+        public void ToggleAllButtonsInteraction(bool interactable)
+        {
+            for (int i = 0; i < _pieceButtons.Length; i++) ToggleSlotButtonInteraction(i, interactable);
+        }
 
-        public void DisableSlotButtonInteraction(int slotID) => _pieceButtons[slotID].interactable = false;
+        public void ToggleAllSlotButtonActiveColor(bool active)
+        {
+            for (int i = 0; i < _pieceButtons.Length; i++) ToggleSlotButtonActiveColor(i, active);
+        }
 
-        public void SetInactiveSlotColor(int slotID) => _pieceButtons[slotID].image.color = _defaultButtonBackgroundColor;
+        public void ToggleSlotButtonInteraction(int slotID, bool interactable) => _pieceButtons[slotID].interactable = interactable;
 
-        public void SetSelectedSlotColor(int slotID) => _pieceButtons[slotID].image.color = _colors.List[_playerID];
+        public void ToggleSlotButtonActiveColor(int slotID, bool active)
+        {
+            _pieceButtons[slotID].image.color = active ? _colors.List[_playerID] : _defaultButtonBackgroundColor;
+        }
 
-        public void SetSlotPieceIcon(int slotID, int pieceID) => _pieceButtons[slotID].image.sprite = _catalog.Get(pieceID).Icon;
+        public void SetSlotPieceIcon(int slotID, int pieceID) => _pieceIcons[slotID].sprite = _catalog.Get(pieceID).Icon;
     }
 }

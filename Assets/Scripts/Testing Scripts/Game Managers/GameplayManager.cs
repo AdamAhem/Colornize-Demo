@@ -15,7 +15,7 @@ namespace Game
         [SerializeField][Min(1)] private int _maxMoves;
 
         [Header("Data")]
-        [SerializeField] private GameInstanceData _gameData;
+        [SerializeField] private GameplayStateData _gameData;
         [SerializeField] private PieceCatalog _catalog;
 
         [Header("Events")]
@@ -61,8 +61,7 @@ namespace Game
                         CellStatus status = _gameData.GetCellStatusAtPosition(piece.row, piece.column);
                         BoardCell cell = status.Cell;
 
-                        status.SetPlayerID(playerID);
-                        status.SetPieceID(piece.pieceID);
+                        status.SetPlayerAndPieceID(playerID, piece.pieceID);
 
                         cell.SetHighlightIconAsPiece(piece.pieceID);
                         cell.SetCellColorAsPlayerColor(playerID);
@@ -290,11 +289,11 @@ namespace Game
 
             for (int i = 0; i < playerPiecePositions.Length; i++)
             {
-                if (playerPiecePositions[i] == currentCell.Position)
-                {
-                    playerPiecePositions[i] = targetCell.Position;
-                    break;
-                }
+                //if (playerPiecePositions[i] == currentCell.Position)
+                //{
+                //    playerPiecePositions[i] = targetCell.Position;
+                //    break;
+                //}
             }
 
             // update board visuals

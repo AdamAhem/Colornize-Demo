@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game
 {
-    [CreateAssetMenu(fileName = "Game Event", menuName = "SO/Events/Game Event")]
+    [CreateAssetMenu(fileName = "Game Event", menuName = "SO/Events/Game Event/Normal")]
     public class GameEvent : ScriptableObject
     {
         [TextArea(1, 10)]
