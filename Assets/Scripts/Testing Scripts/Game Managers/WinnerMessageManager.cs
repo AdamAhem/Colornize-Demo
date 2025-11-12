@@ -63,14 +63,14 @@ namespace Game
             _screen.SetActive(false);
         }
 
-        private void SetColorGradient(Color left, Color right)
+        private void SetColorGradient(Color top, Color bottom)
         {
             VertexGradient gradient = _text.colorGradient;
 
-            gradient.topLeft = left;
-            gradient.bottomLeft = left;
-            gradient.topRight = right;
-            gradient.bottomRight = right;
+            gradient.topLeft = top;
+            gradient.topRight = top;
+            gradient.bottomLeft = bottom;
+            gradient.bottomRight = bottom;
 
             _text.colorGradient = gradient;
         }
