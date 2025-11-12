@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -9,6 +10,8 @@ namespace Game
 
         [Header("Game Objects")]
         [SerializeField] private GameObject _mainDisplayObject;
+        [SerializeField] private Button _endGameButton;
+        [SerializeField] private WinnerMessageManager _winnerMessageManager;
 
         [Header("Data")]
         [SerializeField] private PlacementStateData _placementStateData;
@@ -45,6 +48,10 @@ namespace Game
 
             // EVENT OBSERVATION
             _cellClickedEvent.AddEvent(OnClickCell);
+
+            _endGameButton.interactable = true;
+            _gameplayStateData.AllowMoves(true);
+            _winnerMessageManager.Hide();
         }
 
         public void Disable()
@@ -52,6 +59,8 @@ namespace Game
             Debug.Log("<color=lime>Gameplay Manager Disabled</color>");
 
             _cellClickedEvent.RemoveEvent(OnClickCell);
+            _gameplayStateData.AllowMoves(false);
+            _winnerMessageManager.Hide();
         }
 
         public void Show()
@@ -81,11 +90,15 @@ namespace Game
             ResetGame();
             SetupBoardWithPlacementData();
             SetupBoardWithPlacementSettings();
+
+            _endGameButton.interactable = true;
+            _gameplayStateData.AllowMoves(true);
+            _winnerMessageManager.Hide();
         }
 
-        public void OnPressEnd_UI_BUTTON()
+        public void OnPressEndGame_UI_BUTTON()
         {
-            Debug.Log("pressed end.");
+            ConcludeGame();
         }
 
         #endregion
@@ -94,6 +107,8 @@ namespace Game
 
         private void OnClickCell(Coordinate clickedPosition)
         {
+            if (!_gameplayStateData.MovesAllowed) return;
+
             CellStatus clickedStatus = _boardStatus.GetCellStatusAtPosition(clickedPosition);
             int currentPlayerID = _gameplayStateData.CurrentPlayerID;
 
@@ -319,19 +334,10 @@ namespace Game
         private void CheckForWinners()
         {
             if (!_gameplayStateData.MaxScoreReached) return;
-
-            // loop once to get the maximum score
-            int highestScore = _gameplayStateData.GetMaxScore();
-
-            // loop again to get all players with that score
-            int[] playersWithHighestScore = _gameplayStateData.GetPlayersWithScore(highestScore);
-
-            Debug.Log("Winners:");
-            for (int i = 0; i < playersWithHighestScore.Length; i++)
-            {
-                Debug.Log(playersWithHighestScore[i]);
-            }
+            ConcludeGame();
         }
+
+        private int[] GetWinners() => _gameplayStateData.GetPlayersWithScore(_gameplayStateData.GetMaxScore());
 
         private void ResetGame()
         {
@@ -363,6 +369,40 @@ namespace Game
                     cell.SetHighlightIconAsPiece(pieceID);
                 }
             }
+        }
+
+        private void ConcludeGame()
+        {
+            int[] winners = GetWinners();
+
+            _gameplayStateData.ResetPlayerMovesData();
+
+            _boardStatus.ClearAllPossibleMoves();
+            _boardStatus.HighlightAllPiecesAsActive();
+
+            HighlightWinners(winners);
+
+            _endGameButton.interactable = false;
+            _gameplayStateData.AllowMoves(false);
+        }
+
+        private void HighlightWinners(int[] winners)
+        {
+            // set color scheme of all players to default.
+            for (int i = 0; i < _playerScores.Length; i++)
+            {
+                var score = _playerScores[i];
+                score.SetAsActiveColor(false);
+            }
+
+            // go through the indices of winners and highlight only those
+            for (int j = 0; j < winners.Length; j++)
+            {
+                var winnerScore = _playerScores[winners[j]];
+                winnerScore.SetAsActiveColor(true);
+            }
+
+            _winnerMessageManager.DisplayWinners(winners);
         }
 
         #endregion

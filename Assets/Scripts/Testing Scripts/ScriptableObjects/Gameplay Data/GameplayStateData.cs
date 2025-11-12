@@ -14,13 +14,14 @@ namespace Game
         [SerializeField] private PlayerGameplayData[] _playerGameplayData;
         [SerializeField][ReadOnly] private int _currentPlayerID;
         [SerializeField][ReadOnly] private int _movesLeft;
-        [SerializeField][ReadOnly] private bool _pieceSelected;
         [SerializeField][ReadOnly] private int _maxScore;
         [SerializeField][ReadOnly] private int _currentTotalScore;
+        [SerializeField][ReadOnly] private bool _pieceSelected;
+        [SerializeField][ReadOnly] private bool _allowMoves;
 
         [SerializeField] private Coordinate _selectedPiecePosition;
 
-
+        public bool MovesAllowed => _allowMoves;
         public bool MaxScoreReached => _currentTotalScore >= _maxScore;
         public int CurrentPlayerID => _currentPlayerID;
         public int MovesLeft => _movesLeft;
@@ -93,6 +94,8 @@ namespace Game
         public void SetSelectedPiecePosition(Coordinate position) => _selectedPiecePosition = position;
 
         public void DeductMoves(int moveCost) => _movesLeft -= moveCost;
+
+        public void AllowMoves(bool allow) => _allowMoves = allow;
 
         public void EndCurrentPlayerTurn()
         {

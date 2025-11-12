@@ -17,6 +17,7 @@ namespace Game
         [SerializeField] private PiecePlacementManager _placementManager;
         [SerializeField] private GameplayManager _gameplayManager;
         [SerializeField] private BoardManager _boardManager;
+        [SerializeField] private WinnerMessageManager _winnerMessageManager;
 
         [Header("Data")]
         [SerializeField] private SelectionStateData _selectionData;
@@ -80,6 +81,9 @@ namespace Game
 
             // hide board manager
             _boardManager.Hide();
+
+            // hide winner manager
+            _winnerMessageManager.Hide();
         }
 
         private void ResetToDefaults()

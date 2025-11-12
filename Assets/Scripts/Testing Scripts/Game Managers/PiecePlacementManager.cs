@@ -402,8 +402,6 @@ namespace Game
                     int playerID = i;
                     int pieceID = y.PieceID;
 
-                    Debug.Log((Vector2)y.Position);
-
                     // DATA
                     CellStatus status = _boardStatus.GetCellStatusAtPosition(y.Position);
                     status.SetPlayerAndPieceID(playerID, pieceID);

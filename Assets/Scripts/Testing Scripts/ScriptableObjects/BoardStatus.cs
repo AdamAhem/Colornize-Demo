@@ -102,5 +102,34 @@ namespace Game
                 }
             }
         }
+
+        public void ClearAllPossibleMoves()
+        {
+            for (int col = 0; col < _boardStatus.Length; col++)
+            {
+                var cellColumn = _boardStatus[col];
+                for (int row = 0; row < cellColumn.Length; row++)
+                {
+                    CellStatus status = cellColumn[row];
+                    BoardCell cell = status.Cell;
+
+                    if (status.IsOccupied) continue;
+                    cell.ClearHighlightIcon();
+
+                }
+            }
+        }
+
+        public void HighlightAllPiecesAsActive()
+        {
+            for (int col = 0; col < _boardStatus.Length; col++)
+            {
+                var cellColumn = _boardStatus[col];
+                for (int row = 0; row < cellColumn.Length; row++)
+                {
+                    cellColumn[row].Cell.SetHighlightAsActive(true);
+                }
+            }
+        }
     }
 }
